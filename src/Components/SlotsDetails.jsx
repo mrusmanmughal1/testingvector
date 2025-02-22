@@ -5,7 +5,7 @@ const CustomPrevArrow = (props) => {
   const { onClick } = props;
   return (
     <div className="custom-arrow prev-arrow" onClick={onClick}>
-      <img src={right} alt="Previous" className="w-32" />
+      <img src={right} alt="Previous" />
     </div>
   );
 };
@@ -14,7 +14,7 @@ const CustomNextArrow = (props) => {
   const { onClick } = props;
   return (
     <div className="custom-arrow next-arrow" onClick={onClick}>
-      <img src={left} alt="Next arrow" className="!w-48" />
+      <img src={left} alt="Next arrow" />
     </div>
   );
 };
@@ -27,8 +27,18 @@ const SlotsDetails = () => {
     slidesToShow: 4,
     slidesToScroll: 1,
     initialSlide: 0,
-    prevArrow: <CustomPrevArrow />,
-    nextArrow: <CustomNextArrow />,
+    prevArrow: (
+      <div className="custom-arrow prev-arrow">
+        {" "}
+        <img src={right} alt="Previous" className="w-32" />{" "}
+      </div>
+    ),
+    nextArrow: (
+      <div className="custom-arrow next-arrow">
+        {" "}
+        <img src={left} alt="Next" className="!w-48" />{" "}
+      </div>
+    ),
     responsive: [
       {
         breakpoint: 1024,
