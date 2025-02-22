@@ -19,7 +19,9 @@ const Home = () => {
       <CounterLabels />
       <SlotsDetails />
       <RecentTransactions />
+        <div className="hidden lg:block">
         <Roadmap />
+        </div>
       <AboutUs />
       <FAQ />
       <Footer />
