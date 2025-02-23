@@ -4,7 +4,6 @@ import coin from "../assets/loginwith/coin.svg";
 import meta from "../assets/loginwith/meta.png";
 import trust from "../assets/loginwith/trust.png";
 import all from "../assets/loginwith/all.png";
-// import { ethers } from "ethers";
 // import Web3Modal from 'web3modal';
 // import WalletConnectProvider from '@walletconnect/web3-provider';
 // import WalletConnectProvider from "@walletconnect/web3-provider";
@@ -12,28 +11,27 @@ const Login = ({ setAccountdata, setconnections }) => {
   const [error, setError] = useState(null);
 
   // Function to connect to MetaMask
-  // const connectMetaMask = async () => {
-  //   if (window.ethereum) {
-  //     try {
-  //       // Request account access
-  //       const accounts = await window.ethereum.request({
-  //         method: "eth_requestAccounts",
-  //       });
-  //       setconnections(false);
-  //       setAccountdata(accounts); // Set the connected account
-  //       setError(null);
+  const connectMetaMask = async () => {
+    if (window.ethereum) {
+      try {
+        // Request account access
+        const accounts = await window.ethereum.request({
+          method: "eth_requestAccounts",
+        });
+        setconnections(false);
+        setAccountdata(accounts); // Set the connected account
+        setError(null);
 
-  //       // Initialize Web3
-  //       const web3 = new Web3(window.ethereum);
-  //       console.log("Web3 initialized:", web3);
-  //     } catch (err) {
-  //       setError("Failed to connect to MetaMask.");
-  //       console.error(err);
-  //     }
-  //   } else {
-  //     setError("MetaMask is not installed.");
-  //   }
-  // };
+        // Initialize Web3
+        // const web3 = new Web3(window.ethereum);
+      } catch (err) {
+        setError("Failed to connect to MetaMask.");
+        console.error(err);
+      }
+    } else {
+      setError("MetaMask is not installed.");
+    }
+  };
   // const connectWithProvider = async (providerOptions) => {
   //   try {
   //     const web3Modal = new Web3Modal({ cacheProvider: false, providerOptions });
@@ -135,7 +133,7 @@ const Login = ({ setAccountdata, setconnections }) => {
         </button>
         <button
           className=" cursor-pointer items-center  bg-teal-950/50 border w-full mt-2  px-2 py-2 flex justify-between text-white text-x border-cyan-400 rounded-xl"
-          // onClick={connectMetaMask}
+          onClick={connectMetaMask}
         >
           <p className="flex items-center text-xs gap-2">
             <img src={meta} alt="" className="w-4" /> Meta Mask
