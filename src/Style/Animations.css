@@ -104,10 +104,7 @@
 
 
 
-.card-label::before {
-  /* filter: blur(1.5rem); */
-  /* opacity: 0.5; */
-}
+ 
 
 @keyframes spin {
   from {
@@ -252,10 +249,7 @@
 
 
 
-.card-label::before {
-  /* filter: blur(1.5rem); */
-  /* opacity: 0.5; */
-}
+ 
 
 @keyframes spin {
   from {
@@ -316,8 +310,9 @@
 
 .details-slot.vector::after,
 .details-slot.vector::before {
-  width: 103%;
-  height: 103%;
+  width: 106%;
+  height: 106%;
+  border-radius: 0.5rem;
 
 
 
@@ -346,8 +341,8 @@
 
   .card-label::after,
   .card-label::before {
-    height: 82%;
-    width: 94%;
+    height: 80%;
+    width: 92%;
   }
 
   .card-label-slots::before,
@@ -363,7 +358,8 @@
   .card-label-slots2::after,
   .card-label-slots2::before {
 
-    width: 103%;
+    width: 102%;
+    height: 103%;
   }
 
   .selectedbtn::after,
