@@ -16,12 +16,12 @@ const MobileNav = () => {
              <img
                src={robot}
                alt=""
-               className="  absolute -top-10 z-20 Veritical_wave  w-24  left- md:w-[100px] "
+               className="  absolute -top-8 md:-top-10 z-20 Veritical_wave  w-14  left- md:w-[100px] "
              />
-             <img src={logo} alt="" className="logo  z-10 w-24 md:w-[120px]" />
+             <img src={logo} alt="" className="logo  z-10 w-14 md:w-[120px]" />
            </div>
         <div className="flex items-center gap-4 ">
-        <button className="   rounded px-8 lg:px-12 py-3 bg-orange-200 md:text-xs font-semibold   connect">
+        <button className="   rounded px-8 lg:px-12 py-3 bg-orange-200 text-xs md:text-xs font-bold   connect">
               Connect
             </button>
           <div className="rounded-full  mblbtn card  !bg-[#1E1825]">

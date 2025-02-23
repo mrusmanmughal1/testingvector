@@ -357,7 +357,7 @@
   }
 
   .selected-slot {
-    padding: 0.71rem 1rem
+    padding: 0.4rem   0.71rem ;
   }
 
   .card-label-slots2::after,

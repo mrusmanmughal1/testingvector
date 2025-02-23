@@ -38,7 +38,7 @@ const FAQ = () => {
         <h1 className="text-2xl font-bold text-center   faq title_font   md:mb-6">
           Frequently Asked Questions
         </h1>
-        <div className="radient-effect   -bottom-20  left-0"></div>
+        <div className="radient-effect  hidden md:block  -bottom-20  left-0"></div>
       </div>
       <div className="space-y-4 w-[90%] lg:w-[60%] mx-auto">
         {faqs.map((faq, index) => (
@@ -61,7 +61,7 @@ const FAQ = () => {
         ))}
       </div>
       <div className="flex justify-center">
-        <div className="radient-effect  bottom-0"></div>
+        <div className="radient-effect  hidden md:block bottom-0"></div>
       </div>
     </div>
   );

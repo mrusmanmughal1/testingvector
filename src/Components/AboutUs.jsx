@@ -36,17 +36,17 @@ const AboutUs = () => {
         </p>
       </div>
       <div className="flex  gap-6  md:gap-32 lg:gap-20   w-[95%]  items-center md:items-end pb-0 pt-10  md:py-20">
-        <div className="w-[40%] md:w-[40%] relative  ">
+        <div className="w-[30%] md:w-[40%] relative  ">
           <img src={bg} alt="" className="  w-full md:w-[550px] " />
           <img
             src={main}
             alt=""
             className="absolute w-[135px]   md:w-[480px] left-2 md:left-5 top-4 z-40 "
           />
-          <div className="radient-effect"></div>
+          <div className="radient-effect hidden md:block "></div>
         </div>
-        <div className="w-[60%] md:w-[60%] relative flex flex-col justify-end">
-          <div className="radient-effect right-0 top-20"></div>
+        <div className="w-[70%] md:w-[60%] relative flex flex-col justify-end">
+          <div className="radient-effect  hidden md:block right-0 top-20"></div>
 
           <p className="text-cyan-400 text-[6px] md:text-2xl pb-2 md:pb-10">
             Lorem ipsum dolor sit amet.
@@ -57,7 +57,7 @@ const AboutUs = () => {
                 <div
                   key={i}
                   id="box"
-                  className="flex details-slot vector    justify-center rounded-xl featured_card gap-4 flex-col items-center lg:p-7 lg:py-14   p-4
+                  className="flex details-slot vector    justify-center rounded-md md:rounded-xl featured_card gap-2 md:gap-4 flex-col items-center lg:p-7 lg:py-14   p-2
                 
                 "
                 >

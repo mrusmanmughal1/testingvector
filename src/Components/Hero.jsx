@@ -4,7 +4,7 @@ import crupto2 from "../assets/hero/2.png";
 import { motion } from "framer-motion";
 const Hero = () => {
   return (
-    <div className="w-[90%] mx-auto py-20 flex">
+    <div className="w-[90%] mx-auto overflow-hidden py-20 flex">
       <div className="w-full lg:w-[60%]">
         <p className="   title_font mb-2">
           All In One Solution For your Crypto Needs Vector Hub
@@ -24,7 +24,7 @@ const Hero = () => {
         </div> */}
       </div>
       <div className="  relative  w-2 lg:w-[40%]">
-        <div className="green-radient bottom-0 right-0"></div>
+        <div className=" hidden md:block green-radient bottom-0 right-0"></div>
 
         <motion.img
           src={crupto}

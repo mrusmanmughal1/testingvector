@@ -8,7 +8,7 @@ import robot from "../assets/logo/robot.svg";
 const Footer = () => {
   return (
     <div className=" relative  py-16  w-[90%] m-[auto] text-white">
-      <div className="  bottom-0 right-0      radient-effect "></div>
+      <div className="  bottom-0 right-0   hidden md:block   radient-effect "></div>
       <div className="grid lg:grid-cols-4 grid-cols-1 gap-10">
         <div className="flex  justify-center">
           <div className=" ">
@@ -16,9 +16,9 @@ const Footer = () => {
               <img
                 src={robot}
                 alt=""
-                className="  absolute -top-11 z-20 Veritical_wave  w-24  md:left-4 md:w-[120px] "
+                className="  absolute -top-11 z-20 Veritical_wave  w-20  md:left-4 md:w-[120px] "
               />
-              <img src={logo} alt="" className="logo  z-10 w-24 md:w-[150px]" />
+              <img src={logo} alt="" className="logo  z-10 w-20 md:w-[150px]" />
             </div>
           </div>
         </div>
