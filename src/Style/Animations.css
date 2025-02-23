@@ -322,7 +322,15 @@
 /* table  */
 
 
+.details-slot.vector::after,
+.details-slot.vector::before {
+  width: 102%;
+  height: 102%;
+  border-radius: 1rem;
 
+
+
+}
 
 
 
@@ -383,12 +391,3 @@
 }
 }
 
-.details-slot.vector::after,
-.details-slot.vector::before {
-  width: 102%;
-  height: 102%;
-  border-radius: 1rem;
-
-
-
-}
