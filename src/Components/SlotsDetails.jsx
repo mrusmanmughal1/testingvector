@@ -103,7 +103,7 @@ const SlotsDetails = () => {
         </div>
 
         {/* second  */}
-        <div className="w-[95%] md:w-[90%] relative mx-auto px-4 lg:px-10 py-4    card-label-slots2  details-slot  rounded-xl border-2   ">
+        <div className="w-[95%] md:w-[90%] relative mx-auto px-4 lg:px-10 py-4    card-label-slots2  details-slot  rounded-xl    ">
           <div className=" flex p-2 text-white border-b border-cyan-300/40">
             <div className="w-full font-medium  text-start text-xs lg:text-lg">
               Total Income: 100%
