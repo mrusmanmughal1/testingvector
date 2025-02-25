@@ -5,6 +5,7 @@ import { RxCross1, RxCross2 } from "react-icons/rx";
 import logo from "../assets/logo/vector.png";
 import robot from "../assets/logo/robot.svg";
 import Login from "./Login";
+import { NavLink } from "react-router-dom";
 const MobileNav = () => {
   const [navbar, ShowNavbar] = useState(false);
   const [connections, setconnections] = useState(false);
@@ -28,14 +29,14 @@ const MobileNav = () => {
             Connect
           </button>
           <div className="rounded-full  mblbtn card  !bg-[#1E1825]">
-            <button
+            <NavLink to="/admin"
               onClick={() => {
                 ShowNavbar(!navbar);
               }}
               className="flex   text-lg text-cyan-400"
             >
               {navbar ? <RxCross1 /> : <GiHamburgerMenu />}
-            </button>
+            </NavLink>
           </div>
           {connections && (
             <div className="absolute  right-20 w-52    py-4 px-2 border border-cyan-400 rounded-xl z-[99999] top-20 bg-black ">
