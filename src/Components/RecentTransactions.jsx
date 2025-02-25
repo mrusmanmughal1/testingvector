@@ -77,7 +77,8 @@ const RecentTransactions = () => {
     <div className="py-20">
       <div className="flex justify-center items-center flex-col">
         <div className="title_font mb-20">Recent Transactions</div>
-        <div className="w-[95%] md:w-[90%] flex items-center justify-center gap-2 md:gap-8 mb-8 poppins">
+       <div className="flex justify-between w-[95%] md:w-[90%]">
+       <div className=" flex items-center   gap-2 md:gap-8 mb-8 poppins">
           <button className=" !bg-teal-950  selectedbtn   text-sm md:text-lg text-cyan-400 rounded-md px-4 md:px-12 py-3 ">
             Completed
           </button>
@@ -88,6 +89,8 @@ const RecentTransactions = () => {
             Inprogress
           </button>
         </div>
+        <div className="">s</div>
+       </div>
         <div className="w-[95%] md:w-[90%] rounded-xl   mx-auto text-white  transaction-table">
           <div className="  vector   ">
             <div className="relative overflow-hidden rounded-2xl    bg-navy-900">

@@ -1,9 +1,6 @@
 import React, { useState } from "react";
-import Logo from "./Logo";
-import { BiCross } from "react-icons/bi";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { CgCross } from "react-icons/cg";
-import { FaCross } from "react-icons/fa";
+ 
 import { RxCross1, RxCross2 } from "react-icons/rx";
 import logo from "../assets/logo/vector.png";
 import robot from "../assets/logo/robot.svg";

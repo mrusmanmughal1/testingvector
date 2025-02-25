@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 * {
 
   box-sizing: border-box;
@@ -390,4 +391,29 @@ body {
 
 
 
+}
+
+
+
+
+/* admin site  */
+.admin_title_font {
+  color: white;
+  font-family: "Oxanium", serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: -0.075em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  text-shadow: -2px 2px 0.07px rgba(0, 176, 199, 0.6);
+  z-index: 99;
+  position: relative;
+
+
+}
+
+/* adminside  */
+.admin-link .active>div {
+  color: aqua;
 }

@@ -17,11 +17,7 @@
   }
 }
 
-
-
-
 /* for header  */
-
 
 .card {
   margin: 0 auto;
@@ -29,7 +25,6 @@
   background: rgba(0, 0, 0, 0.01);
   text-align: center;
   position: relative;
-
 }
 
 @property --angle {
@@ -40,11 +35,16 @@
 
 .card::after,
 .card::before {
-  content: '';
+  content: "";
   position: absolute;
   height: 72%;
   width: 94%;
-  background-image: conic-gradient(from var(--angle), transparent, transparent, #00B0C7);
+  background-image: conic-gradient(
+    from var(--angle),
+    transparent,
+    transparent,
+    #00b0c7
+  );
   top: 50%;
   left: 50%;
   translate: -50% -50%;
@@ -54,7 +54,6 @@
   animation: 6s spin linear infinite;
 }
 
-
 @keyframes spin {
   from {
     --angle: 0deg;
@@ -65,11 +64,7 @@
   }
 }
 
-
-
-
 /* for  counter labels */
-
 
 .card-label {
   margin: 0 auto;
@@ -79,19 +74,18 @@
   position: relative;
 }
 
-@property --angle {
-  syntax: "<angle>";
-  initial-value: 0deg;
-  inherits: false;
-}
-
 .card-label::after,
 .card-label::before {
-  content: '';
+  content: "";
   position: absolute;
   height: 89%;
   width: 98%;
-  background-image: conic-gradient(from var(--angle), transparent 50%, #00B0C7, #e30ce727);
+  background-image: conic-gradient(
+    from var(--angle),
+    transparent 50%,
+    #00b0c7,
+    #e30ce727
+  );
   top: 50%;
   left: 50%;
   translate: -50% -50%;
@@ -101,24 +95,7 @@
   animation: 6s spin linear infinite;
 }
 
-
-
-
- 
-
-@keyframes spin {
-  from {
-    --angle: 0deg;
-  }
-
-  to {
-    --angle: 360deg;
-  }
-}
-
-
 /* for slots */
-
 
 .card-label-slots {
   padding: 1.1rem;
@@ -127,19 +104,18 @@
   position: relative;
 }
 
-@property --angle {
-  syntax: "<angle>";
-  initial-value: 0deg;
-  inherits: false;
-}
-
 .card-label-slots::after,
 .card-label-slots::before {
-  content: '';
+  content: "";
   position: absolute;
   height: 76%;
   width: 98%;
-  background-image: conic-gradient(from var(--angle), transparent 50%, #00B0C7, #e30ce727);
+  background-image: conic-gradient(
+    from var(--angle),
+    transparent 50%,
+    #00b0c7,
+    #e30ce727
+  );
   top: 50%;
   left: 50%;
   translate: -50% -50%;
@@ -149,44 +125,24 @@
   animation: 6s spin linear infinite;
 }
 
-
-
-
-
-
-@keyframes spin {
-  from {
-    --angle: 0deg;
-  }
-
-  to {
-    --angle: 360deg;
-  }
-}
-
-
 /* sloot2  */
 
-
-
 .card-label-slots2 {
-
   position: relative;
-}
-
-@property --angle {
-  syntax: "<angle>";
-  initial-value: 0deg;
-  inherits: false;
 }
 
 .card-label-slots2::after,
 .card-label-slots2::before {
-  content: '';
+  content: "";
   position: absolute;
   height: 105%;
   width: 101%;
-  background-image: conic-gradient(from var(--angle), transparent 50%, #00B0C7, #e30ce727);
+  background-image: conic-gradient(
+    from var(--angle),
+    transparent 50%,
+    #00b0c7,
+    #e30ce727
+  );
   top: 50%;
   left: 50%;
   translate: -50% -50%;
@@ -196,47 +152,25 @@
   animation: 6s spin linear infinite;
 }
 
-
-
-
-
-
-@keyframes spin {
-  from {
-    --angle: 0deg;
-  }
-
-  to {
-    --angle: 360deg;
-  }
-}
-
-
-
-
 /* recent transitins  */
-
-
-
 
 .selectedbtn {
   text-align: center;
   position: relative;
 }
 
-@property --angle {
-  syntax: "<angle>";
-  initial-value: 0deg;
-  inherits: false;
-}
-
 .selectedbtn::after,
 .selectedbtn::before {
-  content: '';
+  content: "";
   position: absolute;
   height: 110%;
   width: 104%;
-  background-image: conic-gradient(from var(--angle), transparent 50%, #00B0C7, #e30ce727);
+  background-image: conic-gradient(
+    from var(--angle),
+    transparent 50%,
+    #00b0c7,
+    #e30ce727
+  );
   top: 50%;
   left: 50%;
   translate: -50% -50%;
@@ -245,22 +179,6 @@
   border-radius: 0.5rem;
   animation: 6s spin linear infinite;
 }
-
-
-
-
- 
-
-@keyframes spin {
-  from {
-    --angle: 0deg;
-  }
-
-  to {
-    --angle: 360deg;
-  }
-}
-
 
 /* ready for vector  */
 
@@ -269,19 +187,18 @@
   position: relative;
 }
 
-@property --angle {
-  syntax: "<angle>";
-  initial-value: 0deg;
-  inherits: false;
-}
-
 .vector::after,
 .vector::before {
-  content: '';
+  content: "";
   position: absolute;
   height: 102%;
   width: 100.6%;
-  background-image: conic-gradient(from var(--angle), transparent 50%, #00B0C7, #e30ce729);
+  background-image: conic-gradient(
+    from var(--angle),
+    transparent 50%,
+    #00b0c7,
+    #e30ce729
+  );
   top: 50%;
   left: 50%;
   translate: -50% -50%;
@@ -290,58 +207,28 @@
   border-radius: 1rem;
   animation: 6s spin linear infinite;
 }
-
-
-
-
-
-
-@keyframes spin {
-  from {
-    --angle: 0deg;
-  }
-
-  to {
-    --angle: 360deg;
-  }
+.widgets.vector::after,.widgets.vector::before{
+  border-radius: 0px;
 }
-
-
 
 .details-slot.vector::after,
 .details-slot.vector::before {
   width: 106%;
   height: 106%;
   border-radius: 0.5rem;
-
-
-
 }
 
-
 /* table  */
-
 
 .details-slot.vector::after,
 .details-slot.vector::before {
   width: 102%;
   height: 102%;
   border-radius: 1rem;
-
-
-
 }
 
-
-
-
-
-
-
 /* mobile responsive animation  */
-@media (max-width : 680px) {
-
-
+@media (max-width: 680px) {
   .mblbtn.card::before {
     height: 110%;
     width: 105%;
@@ -356,16 +243,14 @@
   .card-label-slots::before,
   .card-label-slots::after {
     display: none;
-
   }
 
   .selected-slot {
-    padding: 0.4rem   0.71rem ;
+    padding: 0.4rem 0.71rem;
   }
 
   .card-label-slots2::after,
   .card-label-slots2::before {
-
     width: 102%;
     height: 103%;
   }
@@ -380,14 +265,11 @@
     height: 101%;
     width: 102%;
   }
+
   .details-slot.vector::after,
-.details-slot.vector::before {
-  width: 106%;
-  height: 106%;
-  border-radius: 0.5rem;
-
-
-
+  .details-slot.vector::before {
+    width: 106%;
+    height: 106%;
+    border-radius: 0.5rem;
+  }
 }
-}
-
