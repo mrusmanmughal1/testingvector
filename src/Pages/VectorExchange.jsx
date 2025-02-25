@@ -6,23 +6,22 @@ import { motion } from "framer-motion";
 const VectorExchange = () => {
   return (
     <div className="border relative border-cyan-400 rounded-xl min-h-screen  py-14 p-10">
-          <div className=" hidden md:block green-radient top-80 left-0"></div>
+      <div className=" hidden md:block green-radient top-80 left-0"></div>
 
       <div className="flex justify-between items-center  ">
         <div className="">
           <div className="title_font !text-cyan-500">COMING SOON!</div>
           <p className="text-cyan-500 Oxanium text-2xl">Stay Tune with us!</p>
         </div>
-        <div className="">
+        <div className="hidden md:block">
           <img src={logo} alt="" className="w-32 logo" />
         </div>
       </div>
-      <div className="flex justify-between  py-10">
-        <div className="title_font !text-6xl w-full ">
+      <div className="flex flex-col md:flex-row justify-between  py-10">
+        <div className="title_font text-sm md:!text-6xl  w-full ">
           All Good Things <br /> Come To Those Who <br /> Wait...
         </div>
         <div className="  relative   w-full">
-
           <motion.img
             src={crupto}
             alt="Animated"
@@ -68,7 +67,6 @@ const VectorExchange = () => {
           />
         </div>
         <div className=" hidden md:block green-radient bottom-0 right-0"></div>
-
       </div>
     </div>
   );
