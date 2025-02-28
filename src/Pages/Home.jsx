@@ -14,14 +14,16 @@ const Home = () => {
   return (
     <div className=" ">
       <Header />
+
+    
       <MobileNav />
       <Hero />
       <CounterLabels />
       <SlotsDetails />
       <RecentTransactions />
-        <div className="hidden lg:block">
+      <div className="hidden lg:block">
         <Roadmap />
-        </div>
+      </div>
       <AboutUs />
       <FAQ />
       <Footer />

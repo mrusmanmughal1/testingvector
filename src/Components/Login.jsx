@@ -1,128 +1,81 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import binance from "../assets/loginwith/binance.png";
 import coin from "../assets/loginwith/coin.svg";
 import meta from "../assets/loginwith/meta.png";
 import trust from "../assets/loginwith/trust.png";
 import all from "../assets/loginwith/all.png";
-// import Web3Modal from 'web3modal';
-// import WalletConnectProvider from '@walletconnect/web3-provider';
-// import WalletConnectProvider from "@walletconnect/web3-provider";
-const Login = ({ setAccountdata, setconnections }) => {
+// import { useAppKit } from "@reown/appkit/react";
+// import detectEthereumProvider from '@metamask/detect-provider';
+// import WalletConnect from "@walletconnect/client";
+// import QRCodeModal from "@walletconnect/qrcode-modal";
+// import Web3 from 'web3';
+
+const Login = ({ setAccountdata, setconnections, setAccount }) => {
   const [error, setError] = useState(null);
 
   // Function to connect to MetaMask
-  const connectMetaMask = async () => {
-    if (window.ethereum) {
-      try {
-        // Request account access
-        const accounts = await window.ethereum.request({
-          method: "eth_requestAccounts",
-        });
-        setconnections(false);
-        setAccountdata(accounts); // Set the connected account
-        setError(null);
-
-        // Initialize Web3
-        // const web3 = new Web3(window.ethereum);
-      } catch (err) {
-        setError("Failed to connect to MetaMask.");
-        console.error(err);
-      }
-    } else {
-      setError("MetaMask is not installed.");
-    }
-  };
-  // const connectWithProvider = async (providerOptions) => {
-  //   try {
-  //     const web3Modal = new Web3Modal({ cacheProvider: false, providerOptions });
-  //     const instance = await web3Modal.connect();
-  //     const provider = new ethers.providers.Web3Provider(instance);
-  //     const signer = provider.getSigner();
-  //     const userAddress = await signer.getAddress();
-  //     setAccount(userAddress);
-  //   } catch (err) {
-  //     console.error("Connection failed:", err);
+  // const connectMetaMask = async () => {
+  //   const provider = await detectEthereumProvider();
+  //   if (provider) {
+  //     try {
+  //       await provider.request({ method: "eth_requestAccounts" });
+  //       const accounts = await provider.request({ method: 'eth_accounts' });
+  //       setconnections(false);
+  //       setAccountdata(accounts);
+  //       setError(null);
+  //     } catch (err) {
+  //       setError("Failed to connect to MetaMask.");
+  //       console.error(err);
+  //     }
+  //   } else {
+  //     setError("MetaMask is not installed.");
   //   }
   // };
 
-  // const providers = {
-  //   MetaMask: {},
-  //   TrustWallet: {
-  //     walletconnect: {
-  //       package: WalletConnectProvider,
-  //       options: { infuraId: "YOUR_INFURA_PROJECT_ID" },
-  //     },
-  //   },
-  //   Exodus: {}, // Exodus uses MetaMask protocol for browser extension.
-  //   Coin98: {}, // Requires Coin98 Extension installation.
-  //   GuardaWallet: {}, // Similar to MetaMask if installed as browser extension.
-  //   BinanceWeb3: {}, // Binance Chain Wallet extension.
-  //   OKXWeb3: {}, // OKX Wallet extension.
-  //   TokenPocket: {
-  //     walletconnect: {
-  //       package: WalletConnectProvider,
-  //       options: { infuraId: "YOUR_INFURA_PROJECT_ID" },
-  //     },
-  //   },
-  //   KleverWallet: {
-  //     walletconnect: {
-  //       package: WalletConnectProvider,
-  //       options: { infuraId: "YOUR_INFURA_PROJECT_ID" },
-  //     },
-  //   },
-  // };
+  // const connectWalletConnect = async () => {
+  //   const connector = new WalletConnect({
+  //     bridge: "https://bridge.walletconnect.org",
+  //     qrcodeModal: QRCodeModal,
+  //   });
 
-  // const providerOptions = {
-  //   walletconnect: {
-  //     package: WalletConnectProvider,
-  //     options: {
-  //       rpc: {
-  //         1: 'https://mainnet.infura.io/v3/YOUR_INFURA_PROJECT_ID', // Replace with your Infura project ID
-  //       },
-  //     },
-  //   },
-  // };
-  // const walletOptions = [
-  //   { name: 'MetaMask', id: 'injected' },
-  //   { name: 'Trust Wallet', id: 'walletconnect' },
-  //   { name: 'Exodus', id: 'walletconnect' },
-  //   { name: 'Coin98 Wallet', id: 'walletconnect' },
-  //   { name: 'Guarda Wallet', id: 'walletconnect' },
-  //   { name: 'Binance Web3 Wallet', id: 'walletconnect' },
-  //   { name: 'OKX Web3 Wallet', id: 'walletconnect' },
-  //   { name: 'TokenPocket', id: 'walletconnect' },
-  //   { name: 'Klever Wallet', id: 'walletconnect' },
-  // ];
-  // const connectWallet = async (walletId) => {
-  //   try {
-  //     const web3Modal = new Web3Modal({
-  //       cacheProvider: false,
-  //       providerOptions,
-  //     });
-
-  //     const instance = await web3Modal.connectTo(walletId);
-  //     const provider = new ethers.providers.Web3Provider(instance);
-  //     const signer = provider.getSigner();
-  //     const address = await signer.getAddress();
-  //     setAccountdata(address);
-  //   } catch (error) {
-  //     console.error('Connection Error:', error);
+  //   if (!connector.connected) {
+  //     connector.createSession();
   //   }
+
+  //   connector.on("connect", (error, payload) => {
+  //     if (error) {
+  //       setError("Failed to connect with WalletConnect.");
+  //       console.error(error);
+  //       return;
+  //     }
+
+  //     const { accounts, chainId } = payload.params[0];
+  //     setconnections(false);
+  //     setAccountdata(accounts);
+  //     setError(null);
+  //   });
+
+  //   connector.on("session_update", (error, payload) => {
+  //     if (error) {
+  //       console.error(error);
+  //       return;
+  //     }
+  //     const { accounts, chainId } = payload.params[0];
+  //     setAccountdata(accounts);
+  //   });
+
+  //   connector.on("disconnect", (error, payload) => {
+  //     if (error) {
+  //       console.error(error);
+  //       return;
+  //     }
+  //     console.log("Wallet disconnected");
+  //   });
   // };
-  // const { user, loading, loginWithBinance, logout } = useContext(AuthContext);
 
   return (
     <div>
       <>
-        {/* {walletOptions.map((wallet) => (
-          <button
-            key={wallet.name}
-            // onClick={() => connectWallet(wallet.id)}
-            className="px-4 py-2 bg-blue-500 text-white rounded-2xl shadow hover:bg-blue-600 transition"
-          >
-            {wallet.name}
-          </button>
-        ))} */}
         <button className=" cursor-pointer items-center  bg-teal-950/50 border w-full mt-2  px-2 py-2 flex justify-between text-white text-x border-cyan-400 rounded-xl">
           <p className="flex items-center  text-xs gap-2">
             <img src={binance} alt="" className="w-4" /> Binance
@@ -131,10 +84,7 @@ const Login = ({ setAccountdata, setconnections }) => {
             QR Code
           </p>
         </button>
-        <button
-          className=" cursor-pointer items-center  bg-teal-950/50 border w-full mt-2  px-2 py-2 flex justify-between text-white text-x border-cyan-400 rounded-xl"
-          onClick={connectMetaMask}
-        >
+        <button className=" cursor-pointer items-center  bg-teal-950/50 border w-full mt-2  px-2 py-2 flex justify-between text-white text-x border-cyan-400 rounded-xl">
           <p className="flex items-center text-xs gap-2">
             <img src={meta} alt="" className="w-4" /> Meta Mask
           </p>
@@ -142,7 +92,10 @@ const Login = ({ setAccountdata, setconnections }) => {
             QR Code
           </p>
         </button>
-        <button className=" cursor-pointer items-center  bg-teal-950/50 border w-full mt-2  px-2 py-2 flex justify-between text-white text-x border-cyan-400 rounded-xl">
+        <button
+          className=" cursor-pointer items-center  bg-teal-950/50 border w-full mt-2  px-2 py-2 flex justify-between text-white text-x border-cyan-400 rounded-xl"
+          // onClick={connectWalletConnect}
+        >
           <p className="flex items-center text-xs gap-2">
             <img src={trust} alt="" className="w-4" /> Trust Wallet
           </p>
@@ -158,7 +111,10 @@ const Login = ({ setAccountdata, setconnections }) => {
             QR Code
           </p>
         </button>
-        <button className=" cursor-pointer items-center  bg-teal-950/50 border w-full mt-2  px-2 py-2 flex justify-between text-white text-x border-cyan-400 rounded-xl">
+        <button
+          className=" cursor-pointer items-center  bg-teal-950/50 border w-full mt-2  px-2 py-2 flex justify-between text-white text-x border-cyan-400 rounded-xl"
+          // onClick={connectWalletConnect}
+        >
           <p className="flex items-center text-xs gap-2">
             <img src={all} alt="" className="w-4" /> All Wallets
           </p>
@@ -167,6 +123,7 @@ const Login = ({ setAccountdata, setconnections }) => {
           </p>
         </button>
       </>
+      {error && <p style={{ color: "red" }}>{error}</p>}
     </div>
   );
 };

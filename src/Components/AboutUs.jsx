@@ -13,11 +13,11 @@ import { FaSearch } from "react-icons/fa";
 const AboutUs = () => {
   const arr = [
     { icons: six, text: "High quality 3D generated art" },
-    { icons: to, text: "Wholesome community" },
-    { icons: one, text: "Metaverse Integration" },
-    { icons: one, text: "Utility token" },
-    { icons: one, text: "Royalities to be finalized" },
-    { icons: one, text: "Private marketplace" },
+    { icons: one, text: "Wholesome community" },
+    { icons: to, text: "Metaverse Integration" },
+    { icons: three, text: "Utility token" },
+    { icons: fore, text: "Royalities to be finalized" },
+    { icons: five, text: "Private marketplace" },
   ];
   return (
     <div className="flex justify-center items-center   flex-col text-white">

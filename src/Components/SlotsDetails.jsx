@@ -1,66 +1,49 @@
 import Slider from "react-slick";
 import left from "../assets/left.png";
 import right from "../assets/right.png";
-const CustomPrevArrow = (props) => {
-  const { onClick } = props;
-  return (
-    <div className="custom-arrow prev-arrow" onClick={onClick}>
-      <img src={right} alt="Previous" />
-    </div>
-  );
-};
-
-const CustomNextArrow = (props) => {
-  const { onClick } = props;
-  return (
-    <div className="custom-arrow next-arrow" onClick={onClick}>
-      <img src={left} alt="Next arrow" />
-    </div>
-  );
-};
 
 const SlotsDetails = () => {
   var settings = {
-    dots: true,
-    infinite: false,
+    dots: false,
+    infinite: true,
     speed: 500,
-    slidesToShow: 4,
+    slidesToShow: 3,
     slidesToScroll: 1,
     initialSlide: 0,
     prevArrow: (
-      <div className="custom-arrow prev-arrow">
+      <div className="custom-arrow prev-arrow bg-teal-500">
         {" "}
-        <img src={right} alt="Previous" className="w-32" />{" "}
+        <img src={right} alt="Previous"   />{" "}
       </div>
     ),
     nextArrow: (
       <div className="custom-arrow next-arrow">
         {" "}
-        <img src={left} alt="Next" className="!w-48" />{" "}
+        <img src={left} alt="Next"   />{" "}
       </div>
     ),
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToShow: 2,
+          slidesToScroll: 1,
           infinite: true,
-          dots: true,
+          dots: false,
         },
       },
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1,
         },
       },
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 1,
           slidesToScroll: 1,
           dots: false,
         },
@@ -71,7 +54,7 @@ const SlotsDetails = () => {
     <div>
       <div className="flex justify-center flex-col items-center poppins">
         <p className="title_font mb-10 md:mb-20">Slots Details</p>
-        <div className="w-[95%] md:w-[90%] mx-auto  mb-6 md:mb-12 card-label-slots   ">
+        {/* <div className="w-[95%] md:w-[90%] mx-auto  mb-6 md:mb-12 card-label-slots   ">
           <div className="hidden md:block">
             <div className="lg:slots    overflow-scroll  md:overflow-auto  bg-transparent lg:bg-teal-950 md:px-8 py-3  justify-between  text-lg text-white   rounded-xl lg:border-2 border-cyan-300 flex items-center gap-4">
               <div className=" selected-slot text-cyan-400   px-4 py-2 text-center min-w-28 lg:min-w-48">
@@ -100,10 +83,10 @@ const SlotsDetails = () => {
               <div className=" px-4 font-semibold py-2 min-w-28">01= 05 $</div>
             </Slider>
           </div>
-        </div>
+        </div> */}
 
         {/* second  */}
-        <div className="w-[95%] md:w-[90%] relative mx-auto px-4 lg:px-10 py-4    card-label-slots2  details-slot  rounded-xl    ">
+        {/* <div className="w-[95%] md:w-[90%] relative mx-auto px-4 lg:px-10 py-4    card-label-slots2  details-slot  rounded-xl    ">
           <div className=" flex p-2 text-white border-b border-cyan-300/40">
             <div className="w-full font-medium  text-start text-xs lg:text-lg">
               Total Income: 100%
@@ -144,6 +127,62 @@ const SlotsDetails = () => {
           </div>
           <div className="radient-effect right-0 bottom-0 ! hidden md:block  -z-30"></div>
           <div className="radient-effect -left-10 bottom-0 ! -z-30"></div>
+        </div> */}
+        <div className="slider-container w-[90%] mx-auto">
+          <Slider {...settings}>
+            {[1, 2, 3, 4].map((val, i) => {
+              return (
+                <div
+                  key={i}
+                  className="  Oxanium bg-black/30 rounded-3xl border border-cyan-400 p-4 px-6 space-y-3"
+                >
+                  {/* Header */}
+                  <div className="flex border-b border-cyan-500/50 justify-between pb-2 font-semibold items-center">
+                    <h2 className="text-2xl   text-white">Slot 01</h2>
+                    <span className="text-2xl   text-white">${5}</span>
+                  </div>
+
+                  {/* Income Distribution */}
+                  <div className="flex border-b border-cyan-500/50  pb-2 justify-between items-center text-white">
+                    <div>
+                      <p className="text-white text-sm">Matrix Income</p>
+                      <p className="text-xl font-medium">80%</p>
+                    </div>
+                    <div className="text-right">
+                      <p className="text-white text-sm">Interval Income</p>
+                      <p className="text-xl font-medium">20%</p>
+                    </div>
+                  </div>
+
+                  {/* Matrix Income Details */}
+                  <div className="space-y-4 ">
+                    <h3 className="text-white mt-4 text-2xl font-medium text-center ">
+                      MATRIX INCOME DETAILS
+                    </h3>
+
+                    <div className="space-y-3">
+                      {[
+                        { label: "Direct Income", value: "30%" },
+                        { label: "Indirect Income", value: "10%" },
+                        { label: "Level Income", value: "30%" },
+                        { label: "Cashback Income", value: "10%" },
+                        { label: "Success Share", value: "20%" },
+                        { label: "Earning in one Cycle", value: "Upto $31.2" },
+                      ].map((item) => (
+                        <div
+                          key={item.label}
+                          className="flex justify-between items-center p-3 px-5 rounded-3xl   border-2 border-cyan-400/50   hover:border-cyan-400/60 transition-colors"
+                        >
+                          <span className="text-gray-200">{item.label}</span>
+                          <span className="text-white  ">{item.value}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </Slider>
         </div>
       </div>
     </div>

@@ -1,8 +1,11 @@
+button[data-size='md'] {
+  background: transparent !important;
+}
 
 
-
- 
-
+button[data-size='md']:hover:enabled {
+  background: transparent !important;
+}
 
 
 .herotext {
@@ -19,4 +22,3 @@
   box-shadow: -18px -89px 502px 102px rgba(0, 118, 109, 1);
 
 }
- 

@@ -41,10 +41,12 @@ const Header = () => {
           </div>
         </div>
         <div className="w-full flex justify-end">
-          <div className="flex gap-4 items-center  relative ">
+          <div className="flex gap-4 items-center  relative head ">
+      <appkit-button className="cursor-pointer  rounded    text-xs font-semibold   connect" />
+
             <button
               onClick={() => setconnections(!connections)}
-              className="  cursor-pointer  rounded px-12 py-3 bg-orange-200 text-xs font-semibold   connect"
+              className="  cursor-pointer  rounded px-12 py-3   text-xs font-semibold   connect"
             >
               {account ? "account" : "Connect"}
             </button>

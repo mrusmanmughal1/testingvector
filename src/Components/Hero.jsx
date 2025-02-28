@@ -7,12 +7,12 @@ const Hero = () => {
     <div className="w-[90%] mx-auto overflow-hidden md:overflow-visible py-20 flex">
       <div className="w-full lg:w-[60%]">
         <p className="   title_font mb-2">
-          All In One Solution For your Crypto Needs Vector Hub
+          Victor hub is only one solution for your <br/> financial needs
         </p>
-        <p className="text-white text-base lg:text-xl py-4 lg:py-8">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla
-          possimus <br /> ut error quod quo distinctio ratione vel et incidunt
-          quisquam!
+        <p className="text-white text-base lg:text-xl py-4  ">
+          The blockchain based decenterlized platform which can be <br/> convert your
+          dreams in to reality just open your slots and <br/> earn the highest
+          earning every second
         </p>
         {/* <div className="flex gap-4 lg:gap-8 items-center mt-4 Oxanium">
           <button className=" px-12 py-3 text-sm lg:text-base connect   border-white/5 border rounded-md text-white">
@@ -53,16 +53,16 @@ const Hero = () => {
           alt="Animated"
           className="max-w-[200px] sm:max-w-[300px] md:max-w-[350px] lg:max-w-[400px] h-auto absolute -top-10 right-0"
           animate={
-            window.innerWidth < 768 ?{
-            y: [0, 300, 300, 0], // Moves from top to bottom and then left and back to top
-            x: [0, 0, -700, 0],
-          }:
-        
-        {
-            y: [0, 300, 300, 0], // Moves from top to bottom and then left and back to top
-            x: [0, 0, -700, 0],
+            window.innerWidth < 768
+              ? {
+                  y: [0, 300, 300, 0], // Moves from top to bottom and then left and back to top
+                  x: [0, 0, -700, 0],
+                }
+              : {
+                  y: [0, 300, 300, 0], // Moves from top to bottom and then left and back to top
+                  x: [0, 0, -700, 0],
+                }
           }
-        }
           transition={{
             duration: window.innerWidth < 768 ? 12 : 14, // Total duration for one loop
             repeat: Infinity, // Infinite loop
