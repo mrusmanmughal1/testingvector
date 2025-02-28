@@ -138,25 +138,25 @@ const SlotsDetails = () => {
                 >
                   {/* Header */}
                   <div className="flex border-b border-cyan-500/50 justify-between pb-2 font-semibold items-center">
-                    <h2 className="text-2xl   text-white">Slot 01</h2>
-                    <span className="text-2xl   text-white">${5}</span>
+                    <h2 className="md:text-2xl   text-white">Slot 01</h2>
+                    <span className="md:text-2xl   text-white">${5}</span>
                   </div>
 
                   {/* Income Distribution */}
                   <div className="flex border-b border-cyan-500/50  pb-2 justify-between items-center text-white">
                     <div>
                       <p className="text-white text-sm">Matrix Income</p>
-                      <p className="text-xl font-medium">80%</p>
+                      <p className="md:text-xl font-medium">80%</p>
                     </div>
                     <div className="text-right">
                       <p className="text-white text-sm">Interval Income</p>
-                      <p className="text-xl font-medium">20%</p>
+                      <p className="md:text-xl font-medium">20%</p>
                     </div>
                   </div>
 
                   {/* Matrix Income Details */}
                   <div className="space-y-4 ">
-                    <h3 className="text-white mt-4 text-2xl font-medium text-center ">
+                    <h3 className="text-white mt-4 md:text-2xl font-medium text-center ">
                       MATRIX INCOME DETAILS
                     </h3>
 
@@ -167,11 +167,11 @@ const SlotsDetails = () => {
                         { label: "Level Income", value: "30%" },
                         { label: "Cashback Income", value: "10%" },
                         { label: "Success Share", value: "20%" },
-                        { label: "Earning in one Cycle", value: "Upto $31.2" },
+                        { label: "Earning in one Cycle", value: "$31.2" },
                       ].map((item) => (
                         <div
                           key={item.label}
-                          className="flex justify-between items-center p-3 px-5 rounded-3xl   border-2 border-cyan-400/50   hover:border-cyan-400/60 transition-colors"
+                          className="flex justify-between items-center p-3 px-5 rounded-3xl text-sm md:text-base  border-2 border-cyan-400/50   hover:border-cyan-400/60 transition-colors"
                         >
                           <span className="text-gray-200">{item.label}</span>
                           <span className="text-white  ">{item.value}</span>
