@@ -87,21 +87,7 @@ const Header = ({ activeLink, handleLinkClick }) => {
                 />
               </NavLink>
             </div>
-            {/* {connections && (
-              <div className="absolute   w-72 right-12 py-4 px-2 border border-cyan-400 rounded-xl top-12 bg-black/10 ">
-                <div className="flex px-1 justify-between items-center">
-                  <p className="text-white ">Connect Wallet</p>
-                  <p className=" rounded-full  p-[1px] bg-[#00B0C7]">
-                    {" "}
-                    <RxCross2 className="text-sm" />
-                  </p>
-                </div>
-                <Login
-                  setAccountdata={setAccount}
-                  setconnections={setconnections}
-                />
-              </div>
-            )} */}
+           
           </div>
         </div>
       </div>

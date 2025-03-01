@@ -46,7 +46,7 @@ const DahbordWidgets = () => {
         {incomeCards.map((card, index) => (
           <div
             key={index}
-            className="bg-gray-900 border-cyan-900   widgets vector   p-4"
+            className="bg-gray-900  border-cyan-900   widgets vector   p-4"
           >
             <div className="flex flex-row items-center  gap-2 pb-2">
               <span className="bg-cyan-500 rounded-full p-1 text-white">

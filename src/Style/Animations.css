@@ -195,6 +195,14 @@
 .widgets.vector::after,
 .widgets.vector::before {
   border-radius: 0px;
+  background-image: conic-gradient(from var(--angle),
+      transparent 50%,
+      #00b0c7,
+      #01B0C7);
+      backdrop-filter: blur(90.84970092773438px);
+
+box-shadow: 0px 3px 2px 0px #00B0C7;
+
 }
 
 .details-slot.vector::after,

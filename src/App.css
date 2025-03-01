@@ -15,3 +15,15 @@
   box-shadow: -18px -89px 502px 102px rgba(0, 118, 109, 1);
 
 }
+
+.tabledata::-webkit-scrollbar {
+  width: 2px; /* Width of the scrollbar */
+}
+
+.tabledata::-webkit-scrollbar-thumb {
+  background-color: transparent; /* Color of the scrollbar thumb */
+}
+
+.tabledata::-webkit-scrollbar-track {
+  background: transparent; /* Color of the track */
+}

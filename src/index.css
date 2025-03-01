@@ -421,7 +421,8 @@ html {
 
 /* adminside  */
 .admin-link .active>div {
-  color: aqua;
+
+  color:#01B0C7 ;
 }
 
 
