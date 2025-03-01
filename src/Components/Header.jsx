@@ -3,7 +3,7 @@ import Logo from "./Logo";
 import { NavLink } from "react-router-dom";
 import Login from "./Login";
 import { RxCross2 } from "react-icons/rx";
-import user from "../assets/user.png"
+import user from "../assets/user.png";
 const Header = ({ activeLink, handleLinkClick }) => {
   const [connections, setconnections] = useState(false);
   const [account, setAccount] = useState(null);
@@ -11,66 +11,75 @@ const Header = ({ activeLink, handleLinkClick }) => {
   return (
     <div className="hidden md:block">
       {/* ends  */}
+
+ 
+
+
       <div className="w-[90%] mx-auto flex items-center   Oxanium">
         <div className="w-full">
           <Logo />
         </div>
         <div className="w-full  z-10 card ">
           <div
-            className="    
-             
-             bg-teal-900  rounded-full  flex justify-center  p-14 py-5 
-          
-           
-          "
+            className="bg-teal-950  rounded-full  flex justify-center  p-14 py-5 "
           >
             <ul className="uppercase flex gap-8 text-white  ">
               <li>
                 <a
-
                   href="#main"
-                  onClick={() => handleLinkClick('main')}
-                  className={`p-2 ${activeLink === 'main' ? 'text-cyan-500 font-semibold ' : ''}`}
-                > Home</a>
+                  onClick={() => handleLinkClick("main")}
+                  className={`p-2 ${
+                    activeLink === "main" ? "text-cyan-500 font-semibold " : ""
+                  }`}
+                >
+                  {" "}
+                  Home
+                </a>
               </li>
               <li>
                 <a
-                  onClick={() => handleLinkClick('about')}
+                  onClick={() => handleLinkClick("about")}
                   href="#about"
-                  className={`p-2 ${activeLink === 'about' ? 'text-cyan-500 font-semibold' : ''}`}
-
-                > About</a>
+                  className={`p-2 ${
+                    activeLink === "about" ? "text-cyan-500 font-semibold" : ""
+                  }`}
+                >
+                  {" "}
+                  About
+                </a>
               </li>
               <li>
                 <a
-                  onClick={() => handleLinkClick('faq')}
-                  className={`p-2 ${activeLink === 'faq' ? 'text-cyan-500 font-semibold' : ''}`}
-
+                  onClick={() => handleLinkClick("faq")}
+                  className={`p-2 ${
+                    activeLink === "faq" ? "text-cyan-500 font-semibold" : ""
+                  }`}
                   href="#faq"
-                > FAQ</a>
+                >
+                  {" "}
+                  FAQ
+                </a>
               </li>
               <li>
                 <a
-                  className={`p-2 ${activeLink === 'roadmap' ? 'text-cyan-500 font-semibold' : ''}`}
-
-                  onClick={() => handleLinkClick('roadmap')}
+                  className={`p-2 ${
+                    activeLink === "roadmap"
+                      ? "text-cyan-500 font-semibold"
+                      : ""
+                  }`}
+                  onClick={() => handleLinkClick("roadmap")}
                   href="#roadmap"
-
-                > RoadMAp</a>
+                >
+                  {" "}
+                  RoadMAp
+                </a>
               </li>
             </ul>
           </div>
         </div>
         <div className="w-full flex justify-end">
           <div className="flex gap-4 items-center   relative head ">
-
-
-            <appkit-button
-
-              className="cursor-pointer  rounded    text-xs font-semibold hover:connect   connect"
-
-
-            />
+            <appkit-button className="cursor-pointer  rounded    text-xs font-semibold hover:connect   connect" />
 
             {/* <button
               onClick={() => setconnections(!connections)}
@@ -87,7 +96,6 @@ const Header = ({ activeLink, handleLinkClick }) => {
                 />
               </NavLink>
             </div>
-           
           </div>
         </div>
       </div>
