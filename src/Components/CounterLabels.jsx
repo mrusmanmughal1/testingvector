@@ -11,7 +11,7 @@ const CounterLabels = () => {
           </div>
           <div className="space-y-8 w-full flex flex-col  items-center justify-center">
             <p className="text-[9px] md:text-base  text-center md:text-start">
-            All Participant
+            Total Participant
             </p>
             <p className="font-bold   lg:text-4xl">10,000$</p>
           </div>{" "}

@@ -10,20 +10,28 @@ import Roadmap from "../Components/Roadmap";
 import SlotsDetails from "../Components/SlotsDetails";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useState } from "react";
 const Home = () => {
+  const [activeLink, setActiveLink] = useState('');
+
+  const handleLinkClick = (link) => {
+    setActiveLink(link);
+    const element = document.getElementById(link);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <div className=" ">
-      <Header />
-
-    
+      <Header activeLink={activeLink} handleLinkClick={handleLinkClick} />
       <MobileNav />
       <Hero />
       <CounterLabels />
       <SlotsDetails />
       <RecentTransactions />
-      <div className="hidden lg:block">
+      <section id="roadmap" className="hidden lg:block">
         <Roadmap />
-      </div>
+      </section>
       <AboutUs />
       <FAQ />
       <Footer />

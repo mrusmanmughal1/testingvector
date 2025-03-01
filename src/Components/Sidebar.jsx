@@ -1,23 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import vector from "../assets/logo.png";
 import { AiFillAppstore } from "react-icons/ai";
 import { MdOutlineKeyboardDoubleArrowLeft } from "react-icons/md";
 import { NavLink } from "react-router-dom";
 import user from "../assets/user.png";
 import { IoIosArrowDown } from "react-icons/io";
-import { BiCross } from "react-icons/bi";
 import { RxCross2 } from "react-icons/rx";
 
-const Sidebar = ({ setnav }) => {
+
+const Sidebar = ({ setnav, setarrow, arrow }) => {
   return (
     <div className="">
       <div className="hidden md:block">
         <div className="relative border-cyan-400 border-b p-2 flex flex-col justify-center w-full items-center">
           <img src={vector} alt="" className="w-20 relative  " />
 
-          <span className=" absolute bottom-0 -right-3 text-xl bg-cyan-400 logo  p-[6px] rounded-full">
+          <span className={`${arrow ? "rotate-180 text-sm   " : "text-xl"}   absolute bottom-0 -right-3  bg-cyan-400 logo  p-[6px] rounded-full`} onClick={() => setarrow(!arrow)}>
             {" "}
-            <MdOutlineKeyboardDoubleArrowLeft className="" />
+            <MdOutlineKeyboardDoubleArrowLeft />
           </span>
         </div>
       </div>
@@ -77,14 +77,29 @@ const Sidebar = ({ setnav }) => {
             link="Vector-Exchange"
             text="Victor Exchange"
           />
-          <SidebarItem icon={<AiFillAppstore size={20} />} text="Victor Coin" />
-          <SidebarItem icon={<AiFillAppstore size={20} />} text="Gaming hub" />
-          <SidebarItem icon={<AiFillAppstore size={20} />} text="Victor Apps" />
+          <SidebarItem icon={<AiFillAppstore size={20} />} text="Victor Coin"
+            link="Victor"
+
+          />
+          <SidebarItem icon={<AiFillAppstore size={20} />} text="Victor hub"
+            link="Victor"
+
+          />
+          <SidebarItem icon={<AiFillAppstore size={20} />} text="Victor Apps"
+            link="Victor"
+
+          />
           <SidebarItem
             icon={<AiFillAppstore size={20} />}
             text="Victor Global"
+            link="Victor"
+
           />
-          <SidebarItem icon={<AiFillAppstore size={20} />} text="Roadmap" />
+          <SidebarItem icon={<AiFillAppstore size={20} />} text="Roadmap"
+
+            link="#"
+
+          />
         </nav>
       </div>
     </div>
@@ -92,7 +107,7 @@ const Sidebar = ({ setnav }) => {
 };
 
 export default Sidebar;
-export const SidebarItem = ({ icon, text, link }) => {
+export const SidebarItem = ({ icon, text, link, arrow = true }) => {
   return (
     <div className="admin-link">
       <NavLink to={link}>
@@ -100,7 +115,7 @@ export const SidebarItem = ({ icon, text, link }) => {
           className={`flex items-center gap-3 px-3 py-2 rounded-lg cursor-pointer transition-colors ${"text-white hover:bg-gray-800 hover:text-gray-200"}`}
         >
           {icon}
-          <span className="text-lg">{text}</span>
+          {!arrow && <span className="text-lg">{text}</span>}
         </div>
       </NavLink>
     </div>

@@ -22,11 +22,9 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="space-y-6">
+        <div className="  flex flex-col justify-between">
           <p className="text-center md:text-start">
-            Lorem ipsum dolor sit amet consectetur. Tincidunt arcu quis nec quis
-            faucibus massa ultricies. Arcu mauris donec sem faucibus in
-            tristique dignissim odio.
+            Follow and join all our social media accounts so that you keep getting related information of our system.
           </p>
           <div className="flex items-center justify-center md:justify-normal gap-6">
             <a href="" target="_blank">

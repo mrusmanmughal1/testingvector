@@ -7,17 +7,17 @@ const AdminTotalSlots = () => {
       <div className="  mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Slot 1 */}
         <div className="relative rounded-xl border-4 border-cyan-500/50  p-6 overflow-hidden">
-          <div className="flex border-b border-cyan-400 justify-between items-start mb-6">
-            <h2 className="text-xl font-semibold text-white">Slot 1</h2>
-            <span className="text-cyan-400 font-medium">$05</span>
+          <div className="flex border-b border-cyan-400 justify-between text-2xl items-start mb-6">
+            <h2 className=" Oxanium font-semibold text-white">Slot 1</h2>
+            <span className="text-cyan-400   font-medium Oxanium">$05</span>
           </div>
 
-          <div className="grid grid-cols-2 gap-4 text-sm mb-8">
+          <div className="grid grid-cols-2 gap-4 text-sm lato text-lg mb-8">
             <div>
-              <span className="text-gray-400">Total Users: </span>
+              <span className="text-gray-400 font-semibold">Total Users: </span>
               <span className="text-cyan-400">50</span>
             </div>
-            <div>
+            <div className="text-end">
               <span className="text-gray-400">Direct Team: </span>
               <span className="text-cyan-400">50</span>
             </div>
@@ -25,7 +25,7 @@ const AdminTotalSlots = () => {
               <span className="text-gray-400">Complete Cycle: </span>
               <span className="text-cyan-400">01</span>
             </div>
-            <div>
+            <div className="text-end">
               <span className="text-gray-400">Indirect Team: </span>
               <span className="text-cyan-400">01</span>
             </div>
@@ -34,20 +34,19 @@ const AdminTotalSlots = () => {
           {/* Network Visualization */}
           <div className="relative h-48">
             {/* Top Level */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-cyan-400"></div>
 
             {/* Second Level */}
-            <div className="absolute top-16 left-1/2 transform -translate-x-1/2 flex justify-center space-x-20">
-              <div className="w-4 h-4 rounded-full border-2 border-cyan-400"></div>
-              <div className="w-4 h-4 rounded-full border-2 border-cyan-400"></div>
+            <div className="absolute top-7 left-1/2 transform -translate-x-1/2 flex justify-center space-x-56">
+              <div className="w-12 h-12 rounded-full border-2 border-cyan-400"></div>
+              <div className="w-12 h-12 rounded-full border-2 border-cyan-400"></div>
             </div>
 
             {/* Third Level */}
-            <div className="absolute top-32 left-1/2 transform -translate-x-1/2 flex justify-center space-x-12">
+            <div className="absolute top-28 left-1/2 transform -translate-x-1/2 flex justify-center space-x-14">
               {[...Array(6)].map((_, i) => (
                 <div
                   key={i}
-                  className="w-3 h-3 rounded-full border-2 border-cyan-400"
+                  className="w-10 h-10 rounded-full border-2 border-cyan-400"
                 ></div>
               ))}
             </div>
@@ -57,7 +56,7 @@ const AdminTotalSlots = () => {
               {[...Array(18)].map((_, i) => (
                 <div
                   key={i}
-                  className="w-2 h-2 rounded-full border border-cyan-400"
+                  className="w-4 h-4 rounded-full border border-cyan-400"
                 ></div>
               ))}
             </div>

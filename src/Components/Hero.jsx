@@ -4,10 +4,10 @@ import crupto2 from "../assets/hero/2.png";
 import { motion } from "framer-motion";
 const Hero = () => {
   return (
-    <div className="w-[90%] mx-auto overflow-hidden md:overflow-visible py-20 flex">
+    <section id="main" className="w-[90%] mx-auto overflow-hidden md:overflow-visible py-20 flex">
       <div className="w-full lg:w-[60%]">
         <p className="   title_font mb-2">
-          Victor hub is only one solution for your <br/> financial needs
+          Victor hub is only one <br/>solution for your <br/> financial needs
         </p>
         <p className="text-white text-base lg:text-xl py-4  ">
           The blockchain based decenterlized platform which can be <br/> convert your
@@ -70,7 +70,7 @@ const Hero = () => {
           }}
         />
       </div>
-    </div>
+    </section>
   );
 };
 

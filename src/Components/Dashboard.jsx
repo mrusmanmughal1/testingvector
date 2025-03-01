@@ -46,6 +46,10 @@ const Dashboard = () => {
     { slot: "Slot 2", amount: 10, status: "Completed" },
     { slot: "Slot 3", amount: 20, status: "Completed" },
     { slot: "Slot 4", amount: 40, status: "Not Upgraded" },
+    { slot: "Slot 5", amount: 40, status: "Not Upgraded" },
+
+    { slot: "Slot 6", amount: 40, status: "Not Upgraded" },
+
   ];
   const transactions = [
     {
@@ -100,8 +104,8 @@ const Dashboard = () => {
               Slot Details
             </p>
           </div>
-          <div className="overflow-x-auto     relative rounded-xl border-2 border-cyan-500/50  border-cyan-300">
-            <table className="w-full Oxanium  border-collapse">
+          <div className="overflow-x-auto        relative rounded-xl border-2 border-cyan-500/50  border-cyan-300">
+            <table className="w-full Oxanium   border-collapse">
               <thead>
                 <tr className="   md:text-xl ">
                   <th className="text-center py-3 px-4 border border-cyan-400  text-white font-medium">
@@ -138,9 +142,11 @@ const Dashboard = () => {
         </div>
         {/* Transaction Details Table */}
         <div className="md:w-[40%]">
-          <h2 className=" ps-2 admin_title_font text-white mb-4">
-            Transaction Details
-          </h2>
+          <div className="">
+            <h2 className=" text-2xl ps-2  pb-6 text-white admin_title_font">
+              Transaction Details
+            </h2>
+          </div>
           <div className="overflow-x-auto   rounded-lg border  border-cyan-300">
             <table className="w-full md:text-sm Oxanium border-collapse">
               <thead>

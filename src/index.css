@@ -9,7 +9,13 @@
 
 
 body {
+  
   background-color: rgba(0, 0, 0, 0.88);
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 
@@ -417,3 +423,30 @@ body {
 .admin-link .active>div {
   color: aqua;
 }
+
+
+button[data-size='md'] {
+  background: transparent !important;
+  background: transparent;
+}
+ .bordershaow{
+ box-shadow: 0px 0px 8px 0px #00B0C7;
+
+ }
+
+ .dot::after{
+  content:  "";
+  height: 220px;
+  width: 4px;
+  background-color: #00B0c7;
+  position: absolute;
+  height: 193px;
+  width: 1px;
+  background-color: #00B0c7;
+ box-shadow: 0px 0px 8px 0px #00B0C7;
+
+ }
+
+
+
+ 

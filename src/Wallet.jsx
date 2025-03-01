@@ -35,7 +35,12 @@ createAppKit({
   adapters: [wagmiAdapter],
   networks,
   projectId,
+   themeMode: 'dark',
   metadata,
+  themeVariables: {
+    '--w3m-accent' :'transparent',
+      // Strength of the color mix
+  },
   features: {
     analytics: true // Optional - defaults to your Cloud configuration
   }

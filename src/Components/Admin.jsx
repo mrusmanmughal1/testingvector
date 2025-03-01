@@ -10,6 +10,8 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCross1, RxCross2 } from "react-icons/rx";
 const Admin = () => {
   const [navbar, ShowNavbar] = useState(false);
+  const [arrow, setarrow] = useState(false)
+
   const { pathname } = useLocation();
   useEffect(() => {
     ShowNavbar(false);
@@ -42,16 +44,19 @@ const Admin = () => {
           </div>
         </div>
       </div>
-      <div className="flex w-full">
+      <div className="flex w-full h-full">
+        {/* sidebar */}
         <div
-          className={`fixed w-full   md:w-[20%] md:relative top-0  ${
-            navbar ? "right-0" : "-right-[100%] md:right-0"
-          } duration-1000 bg-black z-[9999] min-h-screen md:min-h-full `}
+          className={`fixed w-full md:w-[20%] top-0 ${arrow ? "md:w-[5%]" : "md:w-[20%]"} ${navbar ? "right-0" : "-right-[100%] md:right-0"
+            } duration-1000 bg-black z-[9999] min-h-full md:min-h-screen sticky top-0`}
         >
-          <Sidebar setnav={ShowNavbar} />
+          <Sidebar setnav={ShowNavbar} setarrow={setarrow} arrow={arrow} />
         </div>
-        <div className="w-full">
-          <div className="hidden md:block">
+        {/* sidebar end */}
+
+        <div className="w-full  flex flex-col">
+          {/* header */}
+          <div className="hidden md:block sticky top-0 bg-[#1F2020]  z-[9998] ">
             <div className="flex  justify-between items-center p-5 border-b border-cyan-400">
               <h1 className="admin_title_font text-white">Dashboard</h1>
               <div className="flex items-center gap-4">
@@ -79,7 +84,8 @@ const Admin = () => {
               </div>
             </div>
           </div>
-          <div className=" md:p-6 p-2 ">
+          {/* header end  */}
+          <div className=" flex-1 overflow-y-auto md:p-6 p-2 ">
             <Outlet />
           </div>
         </div>

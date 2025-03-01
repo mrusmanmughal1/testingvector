@@ -13,13 +13,13 @@ const SlotsDetails = () => {
     prevArrow: (
       <div className="custom-arrow prev-arrow bg-teal-500">
         {" "}
-        <img src={right} alt="Previous"   />{" "}
+        <img src={right} alt="Previous" />{" "}
       </div>
     ),
     nextArrow: (
       <div className="custom-arrow next-arrow">
         {" "}
-        <img src={left} alt="Next"   />{" "}
+        <img src={left} alt="Next" />{" "}
       </div>
     ),
     responsive: [
@@ -50,8 +50,18 @@ const SlotsDetails = () => {
       },
     ],
   };
+  const arr = [
+    { label: "Direct Income", value: "30%" },
+    { label: "Indirect Income", value: "10%" },
+    { label: "Level Income", value: "30%" },
+    { label: "Cashback Income", value: "10%" },
+    { label: "Success Share", value: "20%" },
+    { label: "Earning in one Cycle", value: "$31.2" },
+  ]
+  arr[arr.length - 1].value = `√${parseFloat(arr[arr.length - 1].value.replace('$', ''))} = ${Math.sqrt(parseFloat(arr[arr.length - 1].value.replace('$', ''))).toFixed(2)}`;
+
   return (
-    <div>
+    <div >
       <div className="flex justify-center flex-col items-center poppins">
         <p className="title_font mb-10 md:mb-20">Slots Details</p>
         {/* <div className="w-[95%] md:w-[90%] mx-auto  mb-6 md:mb-12 card-label-slots   ">
@@ -130,16 +140,17 @@ const SlotsDetails = () => {
         </div> */}
         <div className="slider-container w-[90%] mx-auto">
           <Slider {...settings}>
-            {[1, 2, 3, 4].map((val, i) => {
+            {[5, 10, 20, 40, 80, 160, 320, 640, 1280, 2560, 5120, 10240].map((val, i) => {
+             const earningInCycleValue = (31.25 * Math.pow(2, i)).toFixed(2);
               return (
                 <div
                   key={i}
-                  className="  Oxanium bg-black/30 rounded-3xl border border-cyan-400 p-4 px-6 space-y-3"
+                  className="  card-label-slots  Oxanium bg-black rounded-3xl border border-cyan-400 p-4 px-6 space-y-3"
                 >
                   {/* Header */}
                   <div className="flex border-b border-cyan-500/50 justify-between pb-2 font-semibold items-center">
-                    <h2 className="md:text-2xl   text-white">Slot 01</h2>
-                    <span className="md:text-2xl   text-white">${5}</span>
+                    <h2 className="md:text-2xl   text-white">Slot {i < 0 ? `0${i + 1}` : `${i + 1}`}</h2>
+                    <span className="md:text-2xl   text-white">${val}</span>
                   </div>
 
                   {/* Income Distribution */}
@@ -161,20 +172,13 @@ const SlotsDetails = () => {
                     </h3>
 
                     <div className="space-y-3">
-                      {[
-                        { label: "Direct Income", value: "30%" },
-                        { label: "Indirect Income", value: "10%" },
-                        { label: "Level Income", value: "30%" },
-                        { label: "Cashback Income", value: "10%" },
-                        { label: "Success Share", value: "20%" },
-                        { label: "Earning in one Cycle", value: "$31.2" },
-                      ].map((item) => (
+                      {arr.map((item) => (
                         <div
                           key={item.label}
                           className="flex justify-between items-center p-3 px-5 rounded-3xl text-sm md:text-base  border-2 border-cyan-400/50   hover:border-cyan-400/60 transition-colors"
                         >
                           <span className="text-gray-200">{item.label}</span>
-                          <span className="text-white  ">{item.value}</span>
+                          <span className="text-white  ">{ item.label === "Earning in one Cycle" ? `$${earningInCycleValue}` : item.value}</span>
                         </div>
                       ))}
                     </div>

@@ -40,7 +40,6 @@ const App = () => {
 
         {/* public routes  */}
         <Route path="/" element={<Home />} />
-        <Route path="/callback" element={<Callback />} />
       </Routes>
     </div>
   );

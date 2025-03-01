@@ -1,11 +1,4 @@
-button[data-size='md'] {
-  background: transparent !important;
-}
 
-
-button[data-size='md']:hover:enabled {
-  background: transparent !important;
-}
 
 
 .herotext {
