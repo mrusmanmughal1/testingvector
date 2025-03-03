@@ -12,7 +12,9 @@ import { FiShare2 } from "react-icons/fi";
 import { FaShareFromSquare } from "react-icons/fa6";
 const Admin = () => {
   const [navbar, ShowNavbar] = useState(false);
-  const [arrow, setarrow] = useState(false)
+  const [arrow, setarrow] = useState(false);
+  const [profile, Showprofile] = useState(false);
+
 
   const { pathname } = useLocation();
   useEffect(() => {
@@ -50,14 +52,14 @@ const Admin = () => {
         {/* sidebar */}
         <div
           className={`fixed w-full md:w-[20%] top-0 ${arrow ? "md:w-[5%]" : "md:w-[20%]"} ${navbar ? "right-0" : "-right-[100%] md:right-0"
-            } duration-1000 bg-black z-[9999] min-h-full md:min-h-screen md:sticky top-0`}
+            } duration-1000 bg-neutral-900 z-[9999] min-h-full md:min-h-screen md:sticky top-0`}
         >
           <Sidebar setnav={ShowNavbar} setarrow={setarrow} arrow={arrow} />
         </div>
         {/* sidebar end */}
 
         <div className="w-full relative  flex flex-col">
-          <div className="absolute z-[999999] top-14 md:top-20   w-72 right-20 md:right-12 py-4 px-2 border border-cyan-400 rounded-xl  bg-gray-900 ">
+          {profile && <div className="absolute z-[999999] top-14 md:top-20   w-72 right-20 md:right-12 py-4 px-2 border border-cyan-400 rounded-xl  bg-gray-900 ">
             <div className="flex px-1 justify-between items-center">
               <p className="text-white  font-bold ">Profile</p>
               <p className=" rounded-full  p-[1px] bg-[#00B0C7]">
@@ -88,7 +90,7 @@ const Admin = () => {
               <FaShareFromSquare /> Logout
             </div>
 
-          </div>
+          </div>}
           {/* header */}
           <div className="hidden md:block sticky top-0 bg-[#1F2020]  z-[9998] ">
             <div className="flex  justify-between items-center p-5 border-b border-cyan-500/70">
@@ -110,7 +112,7 @@ const Admin = () => {
                       <p>Wade Warren</p>
                       <div className="flex items-center  gap-4 justify-between">
                         <p className="text-[9px]">Upline ID #2311231</p>
-                        <IoIosArrowDown />
+                        <IoIosArrowDown onClick={() => Showprofile(!profile)} className={`cursor-pointer ${profile ? "rotate-180" : ""}`} />
                       </div>
                     </div>
                   </div>

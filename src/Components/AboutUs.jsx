@@ -21,10 +21,10 @@ const AboutUs = () => {
       <div className="title_font  mb-10">About Us</div>
       <div className=" space-y-7 text-md lg:text-2xl w-[90%]  lg:w-[70%] text-center ">
         <p>
-        Victer hub is 100%  decenterlized platform which can not be controled by any person it is a automatic system which automatically controled by the blockchain and the blockchain chain is a chain of blocks and the block can not be broken so its clearly defined that it can't be hacked by any person you you have full security on your funds and wallets 
+          Victer hub is 100%  decenterlized platform which can not be controled by any person it is a automatic system which automatically controled by the blockchain and the blockchain chain is a chain of blocks and the block can not be broken so its clearly defined that it can't be hacked by any person you you have full security on your funds and wallets
         </p>
 
-        
+
       </div>
       <div className="flex  gap-6  md:gap-32 lg:gap-20   w-[95%] md:w-[90%]  items-center md:items-end pb-0 pt-10  md:py-20">
         <div className="w-[50%] md:w-[40%] relative  ">
@@ -40,7 +40,7 @@ const AboutUs = () => {
           <div className="radient-effect  hidden md:block right-0 top-20"></div>
 
           <p className="text-cyan-400 text-[8px] md:text-2xl pb-2 md:pb-10">
-          We are provide you a best financial freedom in all type of <br/> activity for earning
+            We are provide you a best financial freedom in all type of <br /> activity for earning
           </p>
           <div className="grid gap-2 lg:gap-8 grid-cols-3 ">
             {arr.map((val, i) => {
@@ -62,7 +62,7 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
-       
+
     </section>
   );
 };

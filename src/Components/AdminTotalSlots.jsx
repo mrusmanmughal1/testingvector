@@ -69,7 +69,58 @@ const AdminTotalSlots = () => {
             <h2 className="text-xl font-semibold text-white">Slot 2</h2>
             <span className="text-cyan-400 font-medium">$10</span>
           </div>
-          <div className="flex items-center justify-center h-64">
+         <div className="blur-lg">
+         <div className="grid grid-cols-2 gap-4 text-sm lato text-lg mb-8">
+            <div>
+              <span className="text-gray-400 font-semibold">Total Users: </span>
+              <span className="text-cyan-400">50</span>
+            </div>
+            <div className="text-end">
+              <span className="text-gray-400">Direct Team: </span>
+              <span className="text-cyan-400">50</span>
+            </div>
+            <div>
+              <span className="text-gray-400">Complete Cycle: </span>
+              <span className="text-cyan-400">01</span>
+            </div>
+            <div className="text-end">
+              <span className="text-gray-400">Indirect Team: </span>
+              <span className="text-cyan-400">01</span>
+            </div>
+          </div>
+
+          {/* Network Visualization */}
+          <div className="relative h-48">
+            {/* Top Level */}
+
+            {/* Second Level */}
+            <div className="absolute top-7 left-1/2 transform -translate-x-1/2 flex justify-center space-x-56">
+              <div className="w-12 h-12 rounded-full border-2 border-cyan-400"></div>
+              <div className="w-12 h-12 rounded-full border-2 border-cyan-400"></div>
+            </div>
+
+            {/* Third Level */}
+            <div className="absolute top-28 left-1/2 transform -translate-x-1/2 flex justify-center space-x-14">
+              {[...Array(6)].map((_, i) => (
+                <div
+                  key={i}
+                  className="w-10 h-10 rounded-full border-2 border-cyan-400"
+                ></div>
+              ))}
+            </div>
+
+            {/* Bottom Level */}
+            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 flex justify-center space-x-4">
+              {[...Array(18)].map((_, i) => (
+                <div
+                  key={i}
+                  className="w-4 h-4 rounded-full border border-cyan-400"
+                ></div>
+              ))}
+            </div>
+          </div>
+         </div>
+          <div className="flex absolute  top-20 left-[40%] items-center justify-center h-64">
             <button className="px-8 py-3 bg-cyan-500 hover:bg-cyan-600 text-white rounded-full transition-colors connect">
               Activate
             </button>
@@ -82,7 +133,58 @@ const AdminTotalSlots = () => {
             <h2 className="text-xl font-semibold text-white">Slot 3</h2>
             <span className="text-cyan-400 font-medium">$20</span>
           </div>
-          <div className="flex items-center justify-center h-64">
+          <div className="blur-lg">
+         <div className="grid grid-cols-2 gap-4 text-sm lato text-lg mb-8">
+            <div>
+              <span className="text-gray-400 font-semibold">Total Users: </span>
+              <span className="text-cyan-400">50</span>
+            </div>
+            <div className="text-end">
+              <span className="text-gray-400">Direct Team: </span>
+              <span className="text-cyan-400">50</span>
+            </div>
+            <div>
+              <span className="text-gray-400">Complete Cycle: </span>
+              <span className="text-cyan-400">01</span>
+            </div>
+            <div className="text-end">
+              <span className="text-gray-400">Indirect Team: </span>
+              <span className="text-cyan-400">01</span>
+            </div>
+          </div>
+
+          {/* Network Visualization */}
+          <div className="relative h-48">
+            {/* Top Level */}
+
+            {/* Second Level */}
+            <div className="absolute top-7 left-1/2 transform -translate-x-1/2 flex justify-center space-x-56">
+              <div className="w-12 h-12 rounded-full border-2 border-cyan-400"></div>
+              <div className="w-12 h-12 rounded-full border-2 border-cyan-400"></div>
+            </div>
+
+            {/* Third Level */}
+            <div className="absolute top-28 left-1/2 transform -translate-x-1/2 flex justify-center space-x-14">
+              {[...Array(6)].map((_, i) => (
+                <div
+                  key={i}
+                  className="w-10 h-10 rounded-full border-2 border-cyan-400"
+                ></div>
+              ))}
+            </div>
+
+            {/* Bottom Level */}
+            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 flex justify-center space-x-4">
+              {[...Array(18)].map((_, i) => (
+                <div
+                  key={i}
+                  className="w-4 h-4 rounded-full border border-cyan-400"
+                ></div>
+              ))}
+            </div>
+          </div>
+         </div>
+          <div className="flex absolute top-20 left-[45%] items-center justify-center h-64">
             <BiLock className="w-12 h-12 text-cyan-500" />
           </div>
         </div>
@@ -93,7 +195,58 @@ const AdminTotalSlots = () => {
             <h2 className="text-xl font-semibold text-white">Slot 4</h2>
             <span className="text-cyan-400 font-medium">$40</span>
           </div>
-          <div className="flex items-center justify-center h-64">
+          <div className="blur-lg">
+         <div className="grid grid-cols-2 gap-4 text-sm lato text-lg mb-8">
+            <div>
+              <span className="text-gray-400 font-semibold">Total Users: </span>
+              <span className="text-cyan-400">50</span>
+            </div>
+            <div className="text-end">
+              <span className="text-gray-400">Direct Team: </span>
+              <span className="text-cyan-400">50</span>
+            </div>
+            <div>
+              <span className="text-gray-400">Complete Cycle: </span>
+              <span className="text-cyan-400">01</span>
+            </div>
+            <div className="text-end">
+              <span className="text-gray-400">Indirect Team: </span>
+              <span className="text-cyan-400">01</span>
+            </div>
+          </div>
+
+          {/* Network Visualization */}
+          <div className="relative h-48">
+            {/* Top Level */}
+
+            {/* Second Level */}
+            <div className="absolute top-7 left-1/2 transform -translate-x-1/2 flex justify-center space-x-56">
+              <div className="w-12 h-12 rounded-full border-2 border-cyan-400"></div>
+              <div className="w-12 h-12 rounded-full border-2 border-cyan-400"></div>
+            </div>
+
+            {/* Third Level */}
+            <div className="absolute top-28 left-1/2 transform -translate-x-1/2 flex justify-center space-x-14">
+              {[...Array(6)].map((_, i) => (
+                <div
+                  key={i}
+                  className="w-10 h-10 rounded-full border-2 border-cyan-400"
+                ></div>
+              ))}
+            </div>
+
+            {/* Bottom Level */}
+            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 flex justify-center space-x-4">
+              {[...Array(18)].map((_, i) => (
+                <div
+                  key={i}
+                  className="w-4 h-4 rounded-full border border-cyan-400"
+                ></div>
+              ))}
+            </div>
+          </div>
+         </div>
+          <div className="flex absolute top-20 left-[45%] items-center justify-center h-64">
             <BiLock className="w-12 h-12 text-cyan-500" />
           </div>
         </div>
