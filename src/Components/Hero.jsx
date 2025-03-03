@@ -4,24 +4,17 @@ import crupto2 from "../assets/hero/2.png";
 import { motion } from "framer-motion";
 const Hero = () => {
   return (
-    <section id="main" className="w-[90%] mx-auto overflow-hidden md:overflow-visible py-20 flex">
+    <section id="main" className=" px-4 md:px-0 md:w-[90%] mx-auto overflow-hidden md:overflow-visible py-20 flex">
       <div className="w-full lg:w-[60%]">
         <p className="   title_font mb-2">
           Victor hub is only one <br/>solution for your <br/> financial needs
         </p>
-        <p className="text-white text-base lg:text-xl py-4  ">
-          The blockchain based decenterlized platform which can be <br/> convert your
-          dreams in to reality just open your slots and <br/> earn the highest
+        <p className="text-white text-base lg:text-xl py-4 w-full md:w-[60%]  ">
+          The blockchain based decenterlized platform which can be   convert your
+          dreams in to reality just open your slots and   earn the highest
           earning every second
         </p>
-        {/* <div className="flex gap-4 lg:gap-8 items-center mt-4 Oxanium">
-          <button className=" px-12 py-3 text-sm lg:text-base connect   border-white/5 border rounded-md text-white">
-            Resgiter
-          </button>
-          <button className="btn-secondary text-sm lg:text-base  px-12 py-3    rounded-md text-white">
-            Login
-          </button>
-        </div> */}
+        
       </div>
       <div className="  relative  w-2 lg:w-[40%]">
         <div className=" hidden md:block green-radient bottom-0 right-0"></div>

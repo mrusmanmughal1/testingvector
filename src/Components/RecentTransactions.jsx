@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { IoIosArrowDown } from "react-icons/io";
 
 const RecentTransactions = () => {
   const [selected, setSelected] = useState("Completed")
@@ -169,26 +170,34 @@ const RecentTransactions = () => {
             <button
               onClick={() => setSelected("Completed")}
               className={`${selected === "Completed" ? "!bg-teal-950 selectedbtn    text-cyan-400" : "text-cyan-500"
-                } text-sm md:text-lg rounded-md px-4 md:px-12 py-3`}
+                } text-sm  md:text-lg rounded-md px-4 md:px-12 py-3`}
             >
               Completed
             </button>
             <button
               onClick={() => setSelected("Cancelled")}
               className={`${selected === "Cancelled" ? "!bg-teal-950 selectedbtn    text-cyan-400" : "text-cyan-500"
-                } text-sm md:text-lg rounded-md px-4  md:px-12 py-3`}
+                } text-sm  md:text-lg rounded-md px-4  md:px-12 py-3`}
             >
               Cancelled
             </button>
             <button
               onClick={() => setSelected("Inprogress")}
               className={`${selected === "Inprogress" ? "!bg-teal-950 selectedbtn    text-cyan-400" : "text-cyan-500"
-                } text-sm md:text-lg rounded-md px-4 md:px-12  py-3`}
+                } text-sm  md:text-lg rounded-md px-4 md:px-12  py-3`}
             >
               Inprogress
             </button>
           </div>
-          <div className="">s</div>
+          <div className="hidden md:block">
+          <button
+              onClick={() => setSelected("Completed")}
+              className={`${selected === "Completed" ? "!bg-teal-950 selectedbtn    text-cyan-400" : "text-cyan-500"
+                } text-base flex items-center gap-2 md:text-lg rounded-md px-4 md:px-6 py-3`}
+            >
+              This Month <IoIosArrowDown/>
+            </button>
+          </div>
         </div>
         <div className="w-[95%] md:w-[90%] rounded-xl   mx-auto text-white  transaction-table">
           <div className="  vector   ">
@@ -196,14 +205,14 @@ const RecentTransactions = () => {
               {/* Glow Effect */}
               <div className="absolute inset-0 pointer-events-none border border-cyan-500 rounded-2xl blur-[2px]"></div>
 
-              <table className="w-[95%] text-cyan-500">
+              <table className="w-full Oxanium md:w-full text-cyan-500">
                 <thead>
                   <tr className="border-b text-xs md:text-lg border-cyan-500/20">
-                    <th className="  md:px-4 py-2 font-medium">#Sno</th>
-                    <th className="  md:px-4 py-2 font-medium">Name</th>
-                    <th className="  md:px-4 py-2 font-medium">Date</th>
-                    <th className="  md:px-4 py-2 font-medium">Category</th>
-                    <th className="text-right md:px-4 py-2 font-medium">Amount</th>
+                    <th className="  md:px-4 py-2 font-bold">#Sno</th>
+                    <th className="text-start  md:px-4 py-2 font-bold">Name</th>
+                    <th className=" text-start md:px-4 py-2 font-bold">Date</th>
+                    <th className="  text-start md:px-4 py-2 font-bold">Category</th>
+                    <th className="text-start md:px-4 py-2 font-bold">Amount</th>
                   </tr>
                 </thead>
                 <tbody className="text-white   text-xs md:text-lg 0/80">
@@ -212,11 +221,11 @@ const RecentTransactions = () => {
                       key={row.sno}
                       className="border-b border-cyan-500/10 hover:bg-cyan-500/5 transition-colors"
                     >
-                      <td className="md:px-4 py-2">{row.sno}</td>
-                      <td className="md:px-4 py-2">{row.name}</td>
-                      <td className="md:px-4 py-2">{row.date}</td>
-                      <td className="md:px-4 py-2">{row.category}</td>
-                      <td className="md:px-4 py-2 text-right">{row.amount}</td>
+                      <td className=" md:px-4 py-2">{row.sno}</td>
+                      <td className=" text-start md:px-4 py-2">{row.name}</td>
+                      <td className="text-start md:px-4 py-2">{row.date}</td>
+                      <td className=" text-start md:px-4 py-2">{row.category}</td>
+                      <td className=" text-start md:px-4 py-2 ">{row.amount}</td>
                     </tr>
                   ))}
                 </tbody>

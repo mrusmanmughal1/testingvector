@@ -1,7 +1,7 @@
 import Slider from "react-slick";
-import left from "../assets/left.png";
-import right from "../assets/right.png";
-
+import left from "../assets/leftarrow.png";
+import right from "../assets/rightarrow.png";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 const SlotsDetails = () => {
   var settings = {
     dots: false,
@@ -10,17 +10,17 @@ const SlotsDetails = () => {
     slidesToShow: 3,
     slidesToScroll: 1,
     initialSlide: 0,
+    arrows: true, 
     prevArrow: (
-      <div className="custom-arrow prev-arrow bg-teal-500">
-        {" "}
-        <img src={right} alt="Previous" />{" "}
+      <div className="!bg-cyan-300 rounded-full ">
+      <img src={left} className="  " />
       </div>
     ),
     nextArrow: (
-      <div className="custom-arrow next-arrow">
-        {" "}
-        <img src={left} alt="Next" />{" "}
+      <div className="">
+      <img src={right} className="   " />
       </div>
+     
     ),
     responsive: [
       {
@@ -61,95 +61,23 @@ const SlotsDetails = () => {
   arr[arr.length - 1].value = `√${parseFloat(arr[arr.length - 1].value.replace('$', ''))} = ${Math.sqrt(parseFloat(arr[arr.length - 1].value.replace('$', ''))).toFixed(2)}`;
 
   return (
-    <div >
+    <div className="relative" >
       <div className="flex justify-center flex-col items-center poppins">
         <p className="title_font mb-10 md:mb-20">Slots Details</p>
-        {/* <div className="w-[95%] md:w-[90%] mx-auto  mb-6 md:mb-12 card-label-slots   ">
-          <div className="hidden md:block">
-            <div className="lg:slots    overflow-scroll  md:overflow-auto  bg-transparent lg:bg-teal-950 md:px-8 py-3  justify-between  text-lg text-white   rounded-xl lg:border-2 border-cyan-300 flex items-center gap-4">
-              <div className=" selected-slot text-cyan-400   px-4 py-2 text-center min-w-28 lg:min-w-48">
-                01= 05 $
-              </div>
-              <div className=" font-semibold px-4 py-2 min-w-28">01= 05 $</div>
-              <div className=" px-4 font-semibold py-2 min-w-28">01= 05 $</div>
-              <div className=" px-4 font-semibold py-2 min-w-28">01= 05 $</div>
-              <div className=" px-4 font-semibold py-2 min-w-28">01= 05 $</div>
-              <div className=" px-4 font-semibold py-2 min-w-28">01= 05 $</div>
-              <div className=" px-4 font-semibold py-2 min-w-28">01= 05 $</div>
-              <div className=" px-4 font-semibold py-2 min-w-28">01= 05 $</div>
-            </div>
-          </div>
-          <div className="slider-container text-gray-600 block md:hidden ">
-            <Slider {...settings}>
-              <div className=" selected-slot text-cyan-400   md:ms-2 px-4 py-2 text-center min-w-28 lg:min-w-48">
-                01= 05 $
-              </div>
-              <div className=" font-semibold px-4 py-2 min-w-28">01= 05 $</div>
-              <div className=" px-4 font-semibold py-2 min-w-28">01= 05 $</div>
-              <div className=" px-4 font-semibold py-2 min-w-28">01= 05 $</div>
-              <div className=" px-4 font-semibold py-2 min-w-28">01= 05 $</div>
-              <div className=" px-4 font-semibold py-2 min-w-28">01= 05 $</div>
-              <div className=" px-4 font-semibold py-2 min-w-28">01= 05 $</div>
-              <div className=" px-4 font-semibold py-2 min-w-28">01= 05 $</div>
-            </Slider>
-          </div>
-        </div> */}
-
-        {/* second  */}
-        {/* <div className="w-[95%] md:w-[90%] relative mx-auto px-4 lg:px-10 py-4    card-label-slots2  details-slot  rounded-xl    ">
-          <div className=" flex p-2 text-white border-b border-cyan-300/40">
-            <div className="w-full font-medium  text-start text-xs lg:text-lg">
-              Total Income: 100%
-            </div>
-            <div className="w-full lg:ps-10 text-xs lg:text-lg">
-              Interval Income Details
-            </div>
-          </div>
-          <div className=" flex p-2 text-white ">
-            <div className="w-full  border-r border-r-cyan-300/40 flex pt-2">
-              <div className="w-full space-y-6">
-                <p className=" text-xs lg:text-md text-cyan-500">
-                  Matrix Income
-                </p>
-                <p className="font-semibold  text-xl lg:text-4xl">80%</p>
-              </div>
-              <div className="w-full space-y-6">
-                <p className=" text-xs lg:text-md text-cyan-500 mb-2 md:m-auto">
-                  Interval Income
-                </p>
-                <p className="font-semibold  text-xl lg:text-4xl">20%</p>
-              </div>
-            </div>
-            <div className="w-full flex pt-2">
-              <div className="w-full space-y-6 ps-4 lg:ps-10">
-                <p className=" text-xs lg:text-md text-cyan-500 ">
-                  Matrix Income
-                </p>
-                <p className="font-semibold  text-xl lg:text-4xl">80%</p>
-              </div>
-              <div className="w-full space-y-6 ps-4 md:ps-0">
-                <p className=" text-xs lg:text-md  text-cyan-500 mb-2 md:m-auto">
-                  Interval Income
-                </p>
-                <p className="font-semibold  text-xl lg:text-4xl">20%</p>
-              </div>
-            </div>
-          </div>
-          <div className="radient-effect right-0 bottom-0 ! hidden md:block  -z-30"></div>
-          <div className="radient-effect -left-10 bottom-0 ! -z-30"></div>
-        </div> */}
-        <div className="slider-container w-[90%] mx-auto">
+        <div className="radient-effect  top-[65%] left-0 "></div>
+        <div className="green-radient  bottom-0 right-0 "></div>
+        <div className="slider-container slowts w-[90%] mx-auto">
           <Slider {...settings}>
             {[5, 10, 20, 40, 80, 160, 320, 640, 1280, 2560, 5120, 10240].map((val, i) => {
              const earningInCycleValue = (31.25 * Math.pow(2, i)).toFixed(2);
               return (
                 <div
                   key={i}
-                  className="  card-label-slots  Oxanium bg-black rounded-3xl border border-cyan-400 p-4 px-6 space-y-3"
+                  className="  card-label-slots  Oxanium md:bg-zinc-900  rounded-3xl border border-cyan-400 p-4 px-6 space-y-3"
                 >
                   {/* Header */}
                   <div className="flex border-b border-cyan-500/50 justify-between pb-2 font-semibold items-center">
-                    <h2 className="md:text-2xl   text-white">Slot {i < 0 ? `0${i + 1}` : `${i + 1}`}</h2>
+                    <h2 className="md:text-2xl   text-white">Slot {i < 9 ? `0${i + 1}` : `${i + 1}`}</h2>
                     <span className="md:text-2xl   text-white">${val}</span>
                   </div>
 

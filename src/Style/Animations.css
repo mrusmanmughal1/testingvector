@@ -191,6 +191,9 @@
   border-radius: 1rem;
   animation: 6s spin linear infinite;
 }
+.vector.aboutbox::after, .vector.aboutbox::before{
+  width: 102%;
+}
 
 .widgets.vector::after,
 .widgets.vector::before {
@@ -231,7 +234,7 @@ box-shadow: 0px 3px 2px 0px #00B0C7;
   .card-label::after,
   .card-label::before {
     height: 80%;
-    width: 92%;
+    width: 94%;
   }
 
   .card-label-slots::before,

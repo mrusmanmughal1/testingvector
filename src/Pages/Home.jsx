@@ -21,6 +21,7 @@ const Home = () => {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
+  
   return (
     <div className=" ">
       <Header activeLink={activeLink} handleLinkClick={handleLinkClick} />
