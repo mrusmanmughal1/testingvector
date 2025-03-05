@@ -24,7 +24,7 @@ const MobileNav = () => {
         <div className="flex items-center gap-4 ">
           <button
             onClick={() => setconnections(true)}
-            className="   rounded px-8 lg:px-12 py-3 bg-orange-200 text-xs md:text-xs font-bold   connect"
+            className=" Oxanium  rounded px-8 lg:px-12 py-3 bg-orange-200 text-xs md:text-xs font-bold   connect"
           >
             Connect
           </button>

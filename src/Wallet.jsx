@@ -39,8 +39,23 @@ createAppKit({
   metadata,
   themeVariables: {
     '--w3m-accent' :'transparent',
-      // Strength of the color mix
+    '--w3m-font-family':'Oxanium',
+    '--w3m-font-size-regular': '8px',
+    '--w3m-font-size-medium': '8px',
+    '--w3m-font-size-large': '8px',
+    '--w3m-font-size-xl': '8px',
+    '--w3m-font-size-xxl': '8px',
+    '--w3m-font-size-mobile-regular': '8px',
+    '--w3m-font-size-mobile-medium': '8px',
+    '--w3m-font-size-mobile-large': '8px',
+    '--w3m-font-size-mobile-xl': '8px',
+    '--w3m-font-size-mobile-xxl': '8px',
+    '--w3m-modal-width': '200px',
+    '--w3m-border-radius': '0px', // Remove border radius
+        '--w3m-border': 'none', // Remove border
+        '--ro-modal-border-width': '0px',
   },
+   
   features: {
     analytics: true // Optional - defaults to your Cloud configuration
   }

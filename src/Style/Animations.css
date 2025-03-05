@@ -37,7 +37,7 @@
 .card::before {
   content: "";
   position: absolute;
-  height: 72%;
+  height: 70%;
   width: 95%;
   background-image: conic-gradient(from var(--angle),
       transparent,
@@ -76,10 +76,11 @@
 .card-label::before {
   content: "";
   position: absolute;
-  height: 89%;
-  width: 98.5%;
+  height: 89.5%;
+  width: 98.3%;
   background-image: conic-gradient(from var(--angle),
       transparent 50%,
+      
       #00b0c7,
       #e30ce727);
   top: 50%;
@@ -171,6 +172,8 @@
 .vector {
   text-align: center;
   position: relative;
+
+
 }
 
 .vector::after,
@@ -181,8 +184,8 @@
   width: 100.6%;
   background-image: conic-gradient(from var(--angle),
       transparent 50%,
-      #00b0c7,
-      #e30ce729);
+      #00B0C7,
+      #00766D);
   top: 50%;
   left: 50%;
   translate: -50% -50%;
@@ -251,6 +254,13 @@ box-shadow: 0px 3px 2px 0px #00B0C7;
     width: 102%;
     height: 103%;
   }
+  .vector::after,
+.vector::before {
+  content: "";
+  position: absolute;
+  height: 102%;
+  width: 101.8%;
+}
 
   .selectedbtn::after,
   .selectedbtn::before {

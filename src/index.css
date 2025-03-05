@@ -9,7 +9,7 @@
 
 
 body {
-  
+
   background-color: rgba(0, 0, 0, 0.88);
   scroll-behavior: smooth;
 }
@@ -44,7 +44,7 @@ html {
 .logo {
   /* Adjust opacity for transparency */
   backdrop-filter: blur(40px);
-  filter: drop-shadow(0 0 30px rgba(0, 176, 199, 0.9)) drop-shadow(0 0 90px #24ecff);
+  filter: drop-shadow(0 0 60px rgb(11, 212, 239)) drop-shadow(0 0 120px #24ecff);
 }
 
 .cards {
@@ -55,17 +55,21 @@ html {
 }
 
 .connect {
+  display: flex;
+  justify-content: center;
+  width: 200px;
+  text-align: center;
   color: white;
-  background: linear-gradient(57.69deg, #00766D 0%, #00B0C7 54.25%);
+  background: #00B0C7;
   border: 1px solid rgba(255, 255, 255, 0.4);
   box-shadow: 1.96px 3.91px 1.96px 0.65px rgba(0, 176, 199, 0.65);
   position: relative;
-  /* Ensure positioning for pseudo-elements */
   overflow: hidden;
-  /* Prevent overflow of pseudo-elements */
 }
 
-/* Pseudo-element for conic gradient */
+/* background: linear-gradient(57.69deg, #00766D 0%, #00B0C7 54.25%); */
+
+
 .connect::before {
   content: '';
   position: absolute;
@@ -73,12 +77,10 @@ html {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: conic-gradient(from var(--angle), rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.1) 100%);
+  background-image: conic-gradient(from var(--angle), rgba(0, 176, 199, 1) 0%, rgba(0, 118, 109, 1) 50%);
   animation: spin 6s linear infinite;
-  opacity: 0.5;
-  /* Adjust opacity to make it less visible */
-  pointer-events: none;
-  /* Prevent interaction with the pseudo-element */
+  opacity: 1;
+  filter: blur(15px);
 }
 
 
@@ -129,7 +131,7 @@ html {
 .title_font {
   color: white;
   font-family: "Oxanium", serif;
-  font-size: 5rem;
+  font-size: 6rem;
   font-weight: 700;
   line-height: 90px;
   letter-spacing: -0.075em;
@@ -145,6 +147,12 @@ html {
 
 
 @media (max-width: 600px) {
+  .logo {
+    /* Adjust opacity for transparency */
+    backdrop-filter: blur(40px);
+    filter: drop-shadow(0 0 20px rgb(26, 225, 251)) drop-shadow(0 0 40px #49f0ff);
+  }
+
   .title_font {
     color: white;
     font-family: "Oxanium", serif;
@@ -155,7 +163,7 @@ html {
     text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
-    text-shadow: -3px 2px 0.07px rgba(0, 176, 199, 0.6);
+    text-shadow: -3px 3px 0.07px rgba(0, 176, 199, 0.6);
 
 
   }
@@ -402,6 +410,7 @@ html {
 
 
 
+
 /* admin site  */
 .admin_title_font {
   color: white;
@@ -422,7 +431,7 @@ html {
 /* adminside  */
 .admin-link .active>div {
 
-  color:#01B0C7 ;
+  color: #01B0C7;
 }
 
 
@@ -430,13 +439,14 @@ button[data-size='md'] {
   background: transparent !important;
   background: transparent;
 }
- .bordershaow{
- box-shadow: 0px 0px 8px 0px #00B0C7;
 
- }
+.bordershaow {
+  box-shadow: 0px 0px 8px 0px #00B0C7;
 
- .dot::after{
-  content:  "";
+}
+
+.dot::after {
+  content: "";
   height: 220px;
   width: 4px;
   background-color: #00B0c7;
@@ -444,10 +454,67 @@ button[data-size='md'] {
   height: 193px;
   width: 1px;
   background-color: #00B0c7;
- box-shadow: 0px 0px 8px 0px #00B0C7;
+  box-shadow: 0px 0px 8px 0px #00B0C7;
 
- }
+}
 
 
+@media(max-width: 680px) {
+  .faq.title_font{
+    font-size: 2rem;
+  } 
+  .label-bg {
+    /* background: linear-gradient(147.75deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%); */
+    backdrop-filter: blur(0px);
 
- 
+    box-shadow: 0px 0px 0px 0px rgba(13, 13, 13, 0.35);
+
+  }
+
+  .dot::after {
+    content: "";
+    height: 220px;
+    width: 4px;
+    background-color: #00B0c7;
+    position: absolute;
+    height: 0;
+    width: 1px;
+    background-color: #00B0c7;
+    box-shadow: 0px 0px 8px 0px #00B0C7;
+
+  }
+
+  .dot {
+    position: relative;
+    /* Ensure that the ::before is positioned relative to the dot */
+  }
+
+  .selectedbtn::after,
+  .selectedbtn::before {
+    height: 109%;
+    width: 104%;
+  }
+
+  .dot::before {
+    content: "";
+    position: absolute;
+    top: -40px;
+    /* This moves the line 40px above the top center */
+    left: 50%;
+    /* This centers the line horizontally */
+    transform: translateX(-50%);
+    /* This ensures the line is perfectly centered */
+    height: 44px;
+    /* Set the height to 40px */
+    width: 1px;
+    /* Line width */
+    background-color: #00B0c7;
+    /* Line color */
+    box-shadow: 0px 0px 8px 0px #00B0C7;
+    /* Optional: adds a glowing effect */
+  }
+}
+
+wui-connect-button {
+  font-family: "Oxanium" !important;
+}

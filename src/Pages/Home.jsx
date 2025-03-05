@@ -30,7 +30,7 @@ const Home = () => {
       <CounterLabels />
       <SlotsDetails />
       <RecentTransactions />
-      <section id="roadmap" className="hidden lg:block">
+      <section id="roadmap"  >
         <Roadmap />
       </section>
       <AboutUs />

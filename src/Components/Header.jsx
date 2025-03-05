@@ -1,18 +1,21 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Logo from "./Logo";
 import { NavLink } from "react-router-dom";
 import Login from "./Login";
 import { RxCross2 } from "react-icons/rx";
-import user from "../assets/user.png";
+import user from "../assets/User.svg";
 const Header = ({ activeLink, handleLinkClick }) => {
   const [connections, setconnections] = useState(false);
   const [account, setAccount] = useState(null);
-
+  useEffect(() => {
+    handleLinkClick("main"); // This will highlight the 'Home' link when the page loads
+  }, [handleLinkClick]);
+  
   return (
-    <div className="hidden md:block">
+    <section id="/" className="hidden md:block">
       {/* ends  */}
 
- 
+
 
 
       <div className="w-[90%] mx-auto flex items-center   Oxanium">
@@ -23,14 +26,13 @@ const Header = ({ activeLink, handleLinkClick }) => {
           <div
             className="bg-teal-950  rounded-full  flex justify-center  p-14 py-5 "
           >
-            <ul className="uppercase flex gap-8 text-white  ">
+            <ul className="uppercase flex gap-8 text-white font-thin  Oxanium">
               <li>
                 <a
                   href="#main"
                   onClick={() => handleLinkClick("main")}
-                  className={`p-2 ${
-                    activeLink === "main" ? "text-cyan-500 font-semibold " : ""
-                  }`}
+                  className={`p-2 ${activeLink === "main" ? "text-cyan-500 font-semibold " : ""
+                    }`}
                 >
                   {" "}
                   Home
@@ -40,9 +42,8 @@ const Header = ({ activeLink, handleLinkClick }) => {
                 <a
                   onClick={() => handleLinkClick("about")}
                   href="#about"
-                  className={`p-2 ${
-                    activeLink === "about" ? "text-cyan-500 font-semibold" : ""
-                  }`}
+                  className={`p-2 ${activeLink === "about" ? "text-cyan-500 font-semibold" : ""
+                    }`}
                 >
                   {" "}
                   About
@@ -51,9 +52,8 @@ const Header = ({ activeLink, handleLinkClick }) => {
               <li>
                 <a
                   onClick={() => handleLinkClick("faq")}
-                  className={`p-2 ${
-                    activeLink === "faq" ? "text-cyan-500 font-semibold" : ""
-                  }`}
+                  className={`p-2 ${activeLink === "faq" ? "text-cyan-500 font-semibold" : ""
+                    }`}
                   href="#faq"
                 >
                   {" "}
@@ -62,11 +62,10 @@ const Header = ({ activeLink, handleLinkClick }) => {
               </li>
               <li>
                 <a
-                  className={`p-2 ${
-                    activeLink === "roadmap"
+                  className={`p-2 ${activeLink === "roadmap"
                       ? "text-cyan-500 font-semibold"
                       : ""
-                  }`}
+                    }`}
                   onClick={() => handleLinkClick("roadmap")}
                   href="#roadmap"
                 >
@@ -78,8 +77,10 @@ const Header = ({ activeLink, handleLinkClick }) => {
           </div>
         </div>
         <div className="w-full flex justify-end">
-          <div className="flex gap-4 items-center   relative head ">
-            <appkit-button className="cursor-pointer  rounded    text-xs font-semibold hover:connect   connect" />
+          <div className="flex gap-4 items-center   relative   ">
+            <appkit-button  label="Connect" size="sm"
+            
+            className="cursor-pointer  rounded     font-semibold   py-2  connect" />
 
             {/* <button
               onClick={() => setconnections(!connections)}
@@ -87,7 +88,7 @@ const Header = ({ activeLink, handleLinkClick }) => {
             >
               {account ? "account" : "Connect"}
             </button> */}
-            <div className="rounded-full  w-10 h-10  overflow-hidden">
+            <div className="rounded-full  w-14 h-14  overflow-hidden">
               <NavLink to="admin/dashboard">
                 <img
                   src={user}
@@ -99,7 +100,7 @@ const Header = ({ activeLink, handleLinkClick }) => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

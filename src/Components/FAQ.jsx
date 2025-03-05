@@ -40,34 +40,34 @@ const FAQ = () => {
   return (
     <section id="faq" className=" relative  poppins text-white mx-auto  py-16 md:py-32">
       <div className="  relative  text-center flex justify-center  mb-20 ">
-        <h1 className="text-2xl font-bold text-center   faq title_font   md:mb-6">
+        <h1 className=" font-bold text-center   faq title_font   md:mb-6">
           Frequently Asked Questions
         </h1>
         <div className="radient-effect  hidden md:block  -bottom-20  left-0"></div>
       </div>
-      <div className="space-y-4 w-[90%] lg:w-[60%] mx-auto">
+      <div className="  w-[90%] lg:w-[60%] mx-auto">
         {faqs.map((faq, index) => (
-          <div key={index} className=" border-b  border-[#01B0C7]/10  py-4">
+          <div key={index} className=" border-b  border-[#01B0C7]/10  py-5 m-0">
             <div
               className="flex justify-between items-center cursor-pointer"
               onClick={() => toggleFAQ(index)}
             >
-              <h2 className="font-medium text-lg">{faq.question}</h2>
+              <h2 className="font-medium text-sm md:text-xl">{faq.question}</h2>
               {openIndex === index ? (
                 <span className="bg-cyan-500 text-black rounded-full p-1 ">
-                  <FaMinus  className="text-xs"/>
+                  <FaMinus className="text-xs" />
 
                 </span>
               ) : (
                 <span className="bg-cyan-600  text-black rounded-full p-1">
-                  <FaPlus className="text-xs"/>
+                  <FaPlus className="text-xs" />
 
                 </span>
 
               )}
             </div>
             {openIndex === index && (
-              <p className="mt-3 text-white/80">{faq.answer}</p>
+              <p className="mt-3 text-white/80 text-[10px] md:text-base">{faq.answer}</p>
             )}
           </div>
         ))}

@@ -1,50 +1,78 @@
-
-
-
-.herotext {
-  text-shadow: -2px 2px #FF0000;
-}
-
-.green-radient {
-  position: absolute;
-
-  background: rgba(0, 118, 109, 1);
-
-
-  backdrop-filter: blur(593.0999755859375px);
-  box-shadow: -18px -89px 502px 102px rgba(0, 118, 109, 1);
-
-}
-
-.tabledata::-webkit-scrollbar {
-  width: 2px; /* Width of the scrollbar */
-}
-
-.tabledata::-webkit-scrollbar-thumb {
-  background-color: transparent; /* Color of the scrollbar thumb */
-}
-
-.tabledata::-webkit-scrollbar-track {
-  background: transparent; /* Color of the track */
-}
-
-/* allows in slots  */
- .slowts .slick-arrow.slick-prev {
-background-color: #00B0C7 ;
-height: 30px;
-width: 30px;
-border-radius: 5rem;
-left: 0;
-z-index: 99;
+ .herotext {
+   text-shadow: -2px 2px #FF0000;
  }
- .slowts .slick-arrow.slick-next {
-  background-color: #00B0C7 ;
-  height: 30px;
-  width: 30px;
-  border-radius: 5rem;
-  right: 0;
-z-index: 99;
 
+ .green-radient {
+   position: absolute;
+
+   background: rgba(0, 118, 109, 1);
+
+
+   backdrop-filter: blur(593.0999755859375px);
+   box-shadow: -18px -89px 502px 102px rgba(0, 118, 109, 1);
+
+ }
+
+ .tabledata::-webkit-scrollbar {
+   width: 2px;
+   /* Width of the scrollbar */
+ }
+
+ .tabledata::-webkit-scrollbar-thumb {
+   background-color: transparent;
+   /* Color of the scrollbar thumb */
+ }
+
+ .tabledata::-webkit-scrollbar-track {
+   background: transparent;
+   /* Color of the track */
+ }
+
+ /* allows in slots  */
+ .slowts .slick-arrow.slick-prev {
+   background-color: #00B0C7;
+   height: 50px;
+   width: 50px;
+   border-radius: 5rem;
+   left: 0;
+   z-index: 99;
+   display: flex !important;
+ }
+
+ .slowts .slick-arrow.slick-next {
+   background-color: #00B0C7;
+   height: 50px;
+   width: 50px;
+   border-radius: 5rem;
+   right: 0;
+   z-index: 99;
+   display: flex !important;
+
+
+ }
+
+ @media (max-width :680px) {
+   .slowts .slick-arrow.slick-next {
+     height: 30px;
+     width: 30px;
    }
-  
- 
+
+   .slowts .slick-arrow.slick-prev {
+     height: 30px;
+     width: 30px;
+   }
+
+ }
+
+
+
+ /* borders dotted  */
+ .cyan-border-text {
+   -webkit-text-stroke: 1px #01B0C7;
+   color: white;
+   font-weight: 800;
+ }
+
+ button[data-size="md"] {
+   width: 200px !important;
+ }

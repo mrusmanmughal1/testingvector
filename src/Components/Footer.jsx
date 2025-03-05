@@ -22,30 +22,32 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="  flex flex-col justify-between">
-          <p className="text-center md:text-start">
+        <div className="  flex flex-col gap-6 md:gap-0 justify-between relative">
+        <div className="radient-effect  block md:hidden top-40 right-0 "></div>
+
+          <p className="text-center  mb-4 md:mb-0 text-lg leading-9 md:text-lg md:text-start">
             Follow and join all our social media accounts so that you keep getting related information of our system.
           </p>
           <div className="flex items-center justify-center md:justify-normal gap-6">
-            <a href="" target="_blank">
-              <img src={fb} alt="" />
+            <a href="" target="_blank" className="p-2 bg-black rounded-full">
+              <img src={fb} alt="" className="w-5 h-5" />
             </a>
-            <a href="" target="_blank">
-              <img src={insta} alt="" />
+            <a href="" target="_blank" className="p-2 bg-black rounded-full">
+              <img src={insta} alt="" className="w-5 h-5" />
             </a>
-            <a href="" target="_blank">
-              <img src={youtube} alt="" />
+            <a href="" target="_blank" className="p-2 bg-black rounded-full">
+              <img src={youtube} alt="" className="w-5 h-5" />
             </a>
-            <a href="" target="_blank">
-              <img src={discord} alt="" />
+            <a href="" target="_blank" className="p-2 bg-black rounded-full">
+              <img src={discord} alt=""  className="w-5 h-5"/>
             </a>
           </div>
-          <p className="hidden md:block">All rights reserved @victorhub</p>
+          <p className="hidden md:block text- md:text-xl">All rights reserved @victorhub</p>
         </div>
         <div className="flex justify-center ">
           <div className="text-center lg:text-start">
-            <p className="font-bold text-xl">Quick Links</p>
-            <ul className="space-y-4 mt-4">
+            <p className="font-bold text-[1.8rem] md:text-2xl">Quick Links</p>
+            <ul className="space-y-4 text-2xl md:text-xl mt-4">
               <li>Home</li>
               <li>About</li>
               <li>Faq</li>
@@ -55,8 +57,8 @@ const Footer = () => {
         </div>
         <div className="flex justify-center">
           <div className="text-center lg:text-start">
-            <p className="font-bold text-xl">Support</p>
-            <ul className="space-y-4 mt-4">
+            <p className="font-bold  text-[1.8rem] md:text-2xl">Support</p>
+            <ul className="space-y-4 text-2xl md:text-xl mt-4">
               <li>Help & Support</li>
               <li>Privacy Policy</li>
               <li>Terms & Conditions</li>
@@ -64,7 +66,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="border-t border-cyan-300 text-center block md:hidden pt-14">
-          <p>All rights reserved @Victorhub</p>
+          <p className="text-xl md:text-base">All rights reserved @Victorhub</p>
         </div>
       </div>
     </div>
