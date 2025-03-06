@@ -1,6 +1,6 @@
 import React from "react";
 import { BiLock } from "react-icons/bi";
-
+import loc from "../assets/dashboard/lock.png"
 const AdminTotalSlots = () => {
   return (
     <div className="min-h-screen    ">
@@ -125,7 +125,7 @@ const AdminTotalSlots = () => {
             </div>
           </div>
           <div className="flex absolute  top-20 left-[40%] items-center justify-center h-64">
-            <button className="px-8 py-3 bg-cyan-500 hover:bg-cyan-600 text-white rounded-full transition-colors connect">
+            <button className="px-8 py-3 bg-cyan-500 hover:bg-cyan-600 text-white rounded-full transition-colors  ">
               Activate
             </button>
           </div>
@@ -138,7 +138,7 @@ const AdminTotalSlots = () => {
             <span className="text-cyan-400 font-medium">$20</span>
           </div>
           <div className="blur-lg">
-            <div className="grid grid-cols-2 gap-4 text-sm lato text-lg mb-8">
+            <div className="grid grid-cols-2 gap-4  lato text-lg mb-8">
               <div>
                 <span className="text-gray-400 font-semibold">Total Users: </span>
                 <span className="text-cyan-400">50</span>
@@ -189,7 +189,7 @@ const AdminTotalSlots = () => {
             </div>
           </div>
           <div className="flex absolute top-20 left-[45%] items-center justify-center h-64">
-            <BiLock className="w-12 h-14 text-cyan-500" />
+            <img src={loc} alt="" className="w-12 h-14" />
           </div>
         </div>
 
@@ -251,7 +251,8 @@ const AdminTotalSlots = () => {
             </div>
           </div>
           <div className="flex absolute top-20 left-[45%] items-center justify-center h-64">
-            <BiLock className="w-12 h-14 text-cyan-500" />
+          <img src={loc} alt="" className="w-12 h-14" />
+
           </div>
         </div>
       </div>
