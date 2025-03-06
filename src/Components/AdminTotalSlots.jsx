@@ -37,30 +37,30 @@ const AdminTotalSlots = () => {
 
             {/* Second Level */}
             <div className="absolute top-7 left-1/2 transform -translate-x-1/2 flex justify-center space-x-60">
-              <div className="w-14 h-16 rounded-[50%]  border-2 border-cyan-400"></div>
+              <div className="w-10 h-12 rounded-[50%]  border-2 border-cyan-400"></div>
        
-              <div className="w-14 h-16 rounded-[50%] border-2 border-cyan-400"></div>
+              <div className="w-10 h-12 rounded-[50%] border-2 border-cyan-400"></div>
             </div>
 
             {/* Third Level */}
-            <div className="absolute top-28 left-1/2 transform -translate-x-1/2 flex justify-center space-x-14">
+            <div className="absolute top-28 left-1/2 transform -translate-x-1/2 flex justify-center space-x-16">
               {[...Array(6)].map((_, i) => (
                 <div
                   key={i}
-                  className="w-10 h-12  rounded-full border-2 border-cyan-400"
+                  className="w-7 h-9  rounded-[50%] border-2 border-cyan-400"
                 ></div>
               ))}
             </div>
 
             {/* Bottom Level */}
-            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 flex justify-center space-x-3">
+            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 flex justify-center space-x-2">
               {[...Array(18)].map((_, i) => (
                 <>
                 <div
                   key={i}
-                  className="w-4 h-5 rounded-xl border border-cyan-400"
+                  className="w-5 h-7 rounded-[50%] border border-cyan-400"
                 ></div>
-                {(i + 1) % 3 === 0 && i !== 17 && <div className="w-1"></div>}
+                {(i + 1) % 3 === 0 && i !== 17 && <div className="w-[1px]"></div>}
                 </>
               ))}
             </div>
