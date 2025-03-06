@@ -37,8 +37,9 @@ const AdminTotalSlots = () => {
 
             {/* Second Level */}
             <div className="absolute top-7 left-1/2 transform -translate-x-1/2 flex justify-center space-x-60">
-              <div className="w-12 h-14 rounded-[1.7rem]  border-2 border-cyan-400"></div>
-              <div className="w-12 h-14 rounded-full border-2 border-cyan-400"></div>
+              <div className="w-14 h-16 rounded-[50%]  border-2 border-cyan-400"></div>
+       
+              <div className="w-14 h-16 rounded-[50%] border-2 border-cyan-400"></div>
             </div>
 
             {/* Third Level */}
