@@ -260,6 +260,9 @@ box-shadow: 0px 3px 2px 0px #00B0C7;
   position: absolute;
   height: 102%;
   width: 101.8%;
+  border-radius: 6px;
+  z-index: -10;
+  background-image: conic-gradient(from var(--angle), transparent 50%, #00B0C7, #e30ce727);
 }
 
   .selectedbtn::after,

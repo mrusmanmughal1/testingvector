@@ -31,8 +31,8 @@
  /* allows in slots  */
  .slowts .slick-arrow.slick-prev {
    background-color: #00B0C7;
-   height: 50px;
-   width: 50px;
+   height: 30px;
+   width: 30px;
    border-radius: 5rem;
    left: 0;
    z-index: 99;
@@ -41,8 +41,8 @@
 
  .slowts .slick-arrow.slick-next {
    background-color: #00B0C7;
-   height: 50px;
-   width: 50px;
+   height: 30px;
+   width: 30px;
    border-radius: 5rem;
    right: 0;
    z-index: 99;

@@ -22,12 +22,9 @@ const MobileNav = () => {
           <img src={logo} alt="" className="logo  z-10 w-14 md:w-[120px]" />
         </div>
         <div className="flex items-center gap-4 ">
-          <button
-            onClick={() => setconnections(true)}
-            className=" Oxanium  rounded px-8 lg:px-12 py-3 bg-orange-200 text-xs md:text-xs font-bold   connect"
-          >
-            Connect
-          </button>
+        <appkit-button  label="Connect" size="sm"
+            
+            className="cursor-pointer  rounded-lg     font-semibold   py-1  connect" />
           <div className="rounded-full  mblbtn card  !bg-[#1E1825]">
             <NavLink to="/admin"
               onClick={() => {

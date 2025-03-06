@@ -14,10 +14,10 @@ const Hero = () => {
         </p>
         
       </div>
-      <div className="  relative  w-2 lg:w-[40%]">
+      <div className="  relative  w-2 lg:w-[35%]">
         <div className=" hidden md:block green-radient bottom-0 right-0"></div>
 
-        {/* <motion.img
+        <motion.img
           src={crupto}
           alt="Animated"
           className="max-w-[150px] sm:max-w-[300px] md:max-w-[350px] lg:max-w-[400px] h-auto absolute -bottom-32 -left-32 "
@@ -60,7 +60,7 @@ const Hero = () => {
             repeat: Infinity, 
             ease: "easeInOut",  
           }}
-        /> */}
+        />
       </div>
     </section>
   );

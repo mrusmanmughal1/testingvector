@@ -147,6 +147,10 @@ html {
 
 
 @media (max-width: 600px) {
+  .connect{
+width: 110px;
+color: white;
+  }
   .logo {
     /* Adjust opacity for transparency */
     backdrop-filter: blur(40px);
@@ -461,7 +465,7 @@ button[data-size='md'] {
 
 @media(max-width: 680px) {
   .faq.title_font{
-    font-size: 2rem;
+    font-size: 1.9rem;
   } 
   .label-bg {
     /* background: linear-gradient(147.75deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%); */

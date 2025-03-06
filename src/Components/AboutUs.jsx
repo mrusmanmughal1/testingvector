@@ -1,4 +1,3 @@
-import React from "react";
 import main from "../assets/Aboutmain/1.svg";
 
 import bg from "../assets/Aboutmain/2.png";
@@ -8,7 +7,7 @@ import three from "../assets/About/3.png";
 import fore from "../assets/About/1.png";
 import five from "../assets/About/5.png";
 import r from "../assets/AboutMain/r.png"
-import b from "../assets/AboutMain/bot.png"
+import b from "../assets/AboutMain/bb.png"
 
 
 const AboutUs = () => {
@@ -20,22 +19,24 @@ const AboutUs = () => {
     { icons: five, text: "⁠Investing in Victor Hub Slots" },
   ];
   return (
-    <section id="about" className="flex justify-center items-center    flex-col text-white">
+    <section id="about" className="flex justify-center items-center  relative  flex-col text-white">
+      <div className="radient-effect block md:hidden top-40    left-0 "></div>
+      <div className=" green-radient block md:hidden -top-32   right-0 "></div>
       <div className="title_font  mb-10">About Us</div>
-      <div className=" space-y-7 text-md  text-[15px]  lg:text-3xl w-[85%] my-4  lg:w-[70%] text-center ">
+      <div className=" space-y-7 text-md  text-[15px]  lg:text-3xl w-[85%] my-4  lg:w-[80%] text-center ">
         <p className="md:leading-[3rem] Lato" >
           Victer hub is 100%  decenterlized platform which can not be controled by any person it is a automatic system which automatically controled by the blockchain and the blockchain chain is a chain of blocks and the block can not be broken so its clearly defined that it can't be hacked by any person you you have full security on your funds and wallets
         </p>
 
 
       </div>
-      <div className="flex  gap-0    lg:gap-0   w-[90%]   items-center md:items-end pb-0 pt-10  md:py-20">
+      <div className="flex  gap-    lg:gap-0  w-[95%] md:w-[90%]   items-center md:items-end pb-0 pt-10  md:py-20">
         <div className="w-[50%] md:w-[40%] relative md:p-10 ">
-          <div className="absolute  left-5 top-2 block md:hidden">
-            <img src={b} alt="" className="bg-slate-950/50 rounded-lg" />
+          <div className=" vector  left-5 top-2   md:hidden inline-block">
+            <img src={b} alt="" className="bg-slate-950/50 rounded-lg " />
 
           </div>
-          <div className="block md:hidden" >
+          <div className="block md:hidden absolute top-0 -z-10" >
             <img src={r} alt="" className="  " />
 
           </div>
@@ -53,7 +54,7 @@ const AboutUs = () => {
           <div className="radient-effect  hidden md:block right-0 top-20"></div>
 
           <p className="text-cyan-400 text-[7px] md:text-3xl pb-2 md:pb-10 mb-1 Lato">
-            We are provide you a best financial freedom in all type of <br /> activity for earning
+            We are provide you a best financial freedom in all type of   activity for earning
           </p>
           <div className="grid gap-2 lg:gap-6  grid-cols-3  items-center">
             {arr.map((val, i) => {
