@@ -22,6 +22,7 @@ const Admin = () => {
   }, [pathname]);
   return (
     <div className="relative">
+
       <div className="block md:hidden">
         <div className="flex justify-between  border-b border-[#01B0C7]/70 pb-2 w-full items-center px-4">
           <div className="">
@@ -51,14 +52,14 @@ const Admin = () => {
       <div className="flex w-full h-full">
         {/* sidebar */}
         <div
-          className={`fixed w-full md:w-[20%] top-0 ${arrow ? "md:w-[5%]" : "md:w-[20%]"} ${navbar ? "right-0" : "-right-[100%] md:right-0"
-            } duration-1000 bg-neutral-900 z-[9999] min-h-full md:min-h-screen md:sticky top-0`}
+          className={` w-full   top-0 ${arrow ? "md:w-[5%]" : "md:w-[20%]"} ${navbar ? "right-0" : "-right-[100%] md:left-0"
+            } duration-1000 bg-neutral-900 z-[9999] min-h-full md:min-h-screen md:fixed top-0`}
         >
           <Sidebar setnav={ShowNavbar} setarrow={setarrow} arrow={arrow} />
         </div>
         {/* sidebar end */}
 
-        <div className="w-full relative  flex flex-col">
+        <div className={`w-full relative ${arrow ? "ml-[5%]" : "ml-[20%]"} flex flex-col`}>
           {profile && <div className="absolute z-[999999] top-14 md:top-20   w-72 right-20 md:right-12 py-4 px-2 border border-cyan-400 rounded-xl  bg-gray-900 ">
             <div className="flex px-1 justify-between items-center">
               <p className="text-white  font-bold ">Profile</p>

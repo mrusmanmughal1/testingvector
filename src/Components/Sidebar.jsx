@@ -50,7 +50,7 @@ const Sidebar = ({ setnav, setarrow, arrow }) => {
         </div>
       </div>
       <div className=" p-4">
-        <nav className="space-y-2">
+        <nav className={`${arrow ? "space-y-4" : "space-y-2"} md:text-lg `}>
           <SidebarItem
             icon={<AiFillAppstore size={20} />}
             text="Dashboard"
@@ -136,7 +136,7 @@ export const SidebarItem = ({ icon, text, link, arrow }) => {
     <div className="admin-link">
       <NavLink to={link}>
         <div
-          className={`flex items-center gap-3 px-3 py-2 rounded-lg cursor-pointer transition-colors ${"text-white hover:bg-gray-800 hover:text-gray-200"}`}
+          className={`flex items-center  gap-3 px-3 py-2 rounded-lg cursor-pointer transition-colors ${"text-white hover:bg-gray-800 hover:text-gray-200"}`}
         >
           {icon}
           {!arrow && <span className="">{text}</span>}

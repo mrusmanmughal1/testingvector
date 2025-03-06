@@ -12,7 +12,7 @@ const AdminTotalSlots = () => {
             <span className="text-cyan-400   font-medium Oxanium">$05</span>
           </div>
 
-          <div className="grid grid-cols-2 gap-4 text-sm lato text-lg mb-8">
+          <div className="grid grid-cols-2 gap-4  lato text-lg mb-8">
             <div>
               <span className="text-gray-400 font-semibold">Total Users: </span>
               <span className="text-cyan-400">50</span>
@@ -37,7 +37,7 @@ const AdminTotalSlots = () => {
 
             {/* Second Level */}
             <div className="absolute top-7 left-1/2 transform -translate-x-1/2 flex justify-center space-x-60">
-              <div className="w-12 h-24 rounded-[100px] border-2 border-cyan-400"></div>
+              <div className="w-12 h-14 rounded-[1.7rem]  border-2 border-cyan-400"></div>
               <div className="w-12 h-14 rounded-full border-2 border-cyan-400"></div>
             </div>
 
@@ -52,12 +52,15 @@ const AdminTotalSlots = () => {
             </div>
 
             {/* Bottom Level */}
-            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 flex justify-center space-x-4">
+            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 flex justify-center space-x-3">
               {[...Array(18)].map((_, i) => (
+                <>
                 <div
                   key={i}
                   className="w-4 h-5 rounded-xl border border-cyan-400"
                 ></div>
+                {(i + 1) % 3 === 0 && i !== 17 && <div className="w-1"></div>}
+                </>
               ))}
             </div>
           </div>
