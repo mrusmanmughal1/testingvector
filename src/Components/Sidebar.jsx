@@ -4,6 +4,8 @@ import { AiFillAppstore, AiOutlineAppstoreAdd, AiOutlineDollar, AiOutlineGlobal 
 import { MdOutlineKeyboardDoubleArrowLeft } from "react-icons/md";
 import { NavLink } from "react-router-dom";
 import user from "../assets/user.png";
+import cross from "../assets/cross.png";
+
 import { IoIosArrowDown } from "react-icons/io";
 import { RxCross2 } from "react-icons/rx";
 import { ImBoxAdd } from "react-icons/im";
@@ -31,7 +33,7 @@ const Sidebar = ({ setnav, setarrow, arrow }) => {
             onClick={() => setnav(false)}
             className=" text-xl  bg-cyan-400 rounded-full"
           >
-            <RxCross2 />
+            <img src={cross} alt="" />
           </button>
         </div>
         <div className="flex items-center gap-2  w-[80%] px-5 mx-auto  rounded-md p-2 border border-cyan-400">

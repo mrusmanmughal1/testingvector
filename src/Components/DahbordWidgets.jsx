@@ -46,22 +46,22 @@ const DahbordWidgets = () => {
         {incomeCards.map((card, index) => (
           <div
             key={index}
-            className="bg-gray-900  border-cyan-900   widgets vector   p-4"
+            className="bg-gray-900  border-cyan-900  rounded-sm widgets vector   p-4"
           >
             <div className="flex flex-row items-center  gap-2 pb-2">
               <span className="bg-cyan-500 rounded-full p-1 text-white">
                 {card.icon}
               </span>
 
-              <div className="md:text-sm text-[8px] font-medium text-gray-200">
+              <div className="md:text-sm text-[8px] font-medium Oxanium text-gray-200/65">
                 {card.title}
               </div>
             </div>
             <div>
-              <div className="text-xs md:text-2xl text-start font-bold text-white">
+              <div className="text-xs md:text-2xl text-start inter font-semibold text-white">
                 {card.amount}
               </div>
-              <p className="text-xs text-start text-gray-400">{card.avg}%</p>
+              <p className="text-xs text-start inter text-gray-400">{card.avg}%</p>
             </div>
           </div>
         ))}

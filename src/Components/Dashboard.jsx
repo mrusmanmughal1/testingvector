@@ -111,17 +111,17 @@ const Dashboard = () => {
               Slot Details
             </p>
           </div>
-          <div className="overflow-x-auto tabledata  max-h-[250px] overflow-y-auto     relative rounded-xl border border-cyan-500/50  border-cyan-600">
+          <div className="overflow-x-auto tabledata  max-h-[250px] overflow-y-auto     relative rounded-xl border border-cyan-700  border-cyan-600">
             <table className="w-full Oxanium   border-collapse">
               <thead>
                 <tr className="   md:text-xl ">
-                  <th className="text-center py-3 px-4 border border-cyan-400  text-white font-medium">
+                  <th className="text-center py-3 px-4 border border-cyan-700  text-white font-medium">
                     Slot No.
                   </th>
-                  <th className="text-center py-3 px-4 border border-cyan-400  text-white font-medium">
+                  <th className="text-center py-3 px-4 border border-cyan-700  text-white font-medium">
                     Amount ($)
                   </th>
-                  <th className="text-center py-3 px-4 border border-cyan-400  text-white font-medium">
+                  <th className="text-center py-3 px-4 border border-cyan-700  text-white font-medium">
                     Upgrade Status
                   </th>
                 </tr>
@@ -132,13 +132,13 @@ const Dashboard = () => {
                     key={index}
                     className="border border-cyan-600  text-gray-300   hover:bg-cyan-950/30 transition-colors"
                   >
-                    <td className="py-3 text-center border border-cyan-400 px-4  ">
+                    <td className="py-3 text-center border border-cyan-700 px-4  ">
                       {slot.slot}
                     </td>
-                    <td className="py-3 text-center px-4   border border-cyan-400 ">
+                    <td className="py-3 text-center px-4   border border-cyan-700 ">
                       {slot.amount}
                     </td>
-                    <td className="py-3 text-center px-4   border border-cyan-400 ">
+                    <td className="py-3 text-center px-4   border border-cyan-700 ">
                       {slot.status}
                     </td>
                   </tr>
@@ -154,7 +154,7 @@ const Dashboard = () => {
               Transaction Details
             </h2>
           </div>
-          <div className="overflow-x-auto  tabledata  max-h-[250px]   rounded-lg border  border-cyan-600">
+          <div className="overflow-x-auto  tabledata  max-h-[250px]   rounded-lg border  border-cyan-700">
             <table className="w-full md:text-sm Oxanium border-collapse">
               <thead>
                 <tr className="border-b border-cyan-400">
@@ -179,7 +179,7 @@ const Dashboard = () => {
                 {transactions.map((tx, index) => (
                   <tr
                     key={index}
-                    className="border-b border-cyan-400 text-xs last:border-0 hover:bg-cyan-950/30 transition-colors"
+                    className="border-b border-cyan-700 text-xs last:border-0 hover:bg-cyan-950/30 transition-colors"
                   >
                     <td className="py-3 px-4 text-white">{tx.id}</td>
                     <td className="py-3 px-4 text-white">{tx.name}</td>

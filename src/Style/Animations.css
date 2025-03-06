@@ -80,7 +80,7 @@
   width: 98.3%;
   background-image: conic-gradient(from var(--angle),
       transparent 50%,
-      
+
       #00b0c7,
       #e30ce727);
   top: 50%;
@@ -194,8 +194,22 @@
   border-radius: 1rem;
   animation: 6s spin linear infinite;
 }
-.vector.aboutbox::after, .vector.aboutbox::before{
+
+.vector.aboutbox::after,
+.vector.aboutbox::before {
   width: 102%;
+  background-image: conic-gradient(from var(--angle), transparent 50%, #00B0C7, #e30ce727);
+
+}
+
+.robot.vector::after,
+.robot.vector::before {
+
+  top: 50%;
+  border-radius: 1.8rem;
+  width: 102%;
+  background-image: conic-gradient(from var(--angle), transparent 50%, #00B0C7, #e30ce727);
+
 }
 
 .widgets.vector::after,
@@ -205,9 +219,9 @@
       transparent 50%,
       #00b0c7,
       #01B0C7);
-      backdrop-filter: blur(90.84970092773438px);
+  backdrop-filter: blur(90.84970092773438px);
 
-box-shadow: 0px 3px 2px 0px #00B0C7;
+  box-shadow: 0px 3px 2px 0px #00B0C7;
 
 }
 
@@ -254,16 +268,17 @@ box-shadow: 0px 3px 2px 0px #00B0C7;
     width: 102%;
     height: 103%;
   }
+
   .vector::after,
-.vector::before {
-  content: "";
-  position: absolute;
-  height: 102%;
-  width: 101.8%;
-  border-radius: 6px;
-  z-index: -10;
-  background-image: conic-gradient(from var(--angle), transparent 50%, #00B0C7, #e30ce727);
-}
+  .vector::before {
+    content: "";
+    position: absolute;
+    height: 102%;
+    width: 101.8%;
+    border-radius: 6px;
+    z-index: -10;
+    background-image: conic-gradient(from var(--angle), transparent 50%, #00B0C7, #e30ce727);
+  }
 
   .selectedbtn::after,
   .selectedbtn::before {

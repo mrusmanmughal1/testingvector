@@ -1,6 +1,7 @@
 import React from "react";
 
 const Roadmap = () => {
+  
   return (
     <div>
       <div className="flex justify-center flex-col items-center  relative md:py-20">
@@ -11,7 +12,11 @@ const Roadmap = () => {
 
         <div className="md:border md:bordershaow flex md:flex-row gap-10  flex-col justify-center  items-center   relative rounded-2xl md:rounded-[5rem] h-auto md:h-[430px] w-[90%] md:w-[60%] mx-auto border-cyan-400">
 
-          <div className=" relative md:absolute w-full md:w-[30rem] z-50     bg-stone-800  rounded-2xl md:rounded-2xl -top-5 md:-top-10  border-cyan-500 border-b-0  border-2  px-6 md:px-2 md:ps-6 py-4 md:py-6 text-white border-dashed">
+          <div 
+          className=" relative md:absolute w-full md:w-[30rem] z-50         bg-stone-800  rounded-2xl md:rounded-2xl -top-5 md:-top-10  border-cyan-500 border-b-0  border-2  px-6 md:px-2 md:ps-6 py-4 md:py-6 text-white border-dashed"
+          style={{ boxShadow: 'inset 0 -1px 8px -4px rgba(255, 255, 255, 1)' }}
+          
+          >
 
             <span className=" hidden md:block  rounded-full px-2 py-[5px] md:p-2 counterbg_effect text-[14px]  absolute  -top-3 md:-top-6  bg-black left-[40%] md:px-4 font-semibold border-blue-700 border ">
               1

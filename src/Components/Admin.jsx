@@ -21,7 +21,7 @@ const Admin = () => {
     ShowNavbar(false);
   }, [pathname]);
   return (
-    <div className="relative">
+    <div className="relative overflow-hidden md:overflow-visible">
 
       <div className="block md:hidden">
         <div className="flex justify-between  border-b border-[#01B0C7]/70 pb-2 w-full items-center px-4">
@@ -53,7 +53,7 @@ const Admin = () => {
         {/* sidebar */}
         <div
           className={`    top-0 ${arrow ? "w-full md:w-[5%]" : " w-full  md:w-[20%]  "} ${navbar ? "right-0" : "-right-[100%] md:left-0"
-            } duration-1000 bg-neutral-900 z-[9999] min-h-full md:min-h-screen md:fixed  absolute  top-0`}
+            } duration-1000 bg-black md:bg-[#211F27B5] z-[9999] min-h-full md:min-h-screen md:fixed  absolute  top-0`}
         >
           <Sidebar setnav={ShowNavbar} setarrow={setarrow} arrow={arrow} />
         </div>
@@ -125,10 +125,10 @@ const Admin = () => {
             </div>
           </div>
           {/* header end  */}
-          <div className=" flex-1 overflow-y-auto md:p-6 p-2  relative">
+          <div className=" flex-1  md:p-6 p-2  relative">
             <div className=" hidden md:block radient-effect  top-96"></div>
-            <div className=" hidden md:block green-radient  top-96 left-[50%]"></div>
-            <div className=" hidden md:block green-radient  top-[60%] left-[50%]"></div>
+            <div className=" hidden md:block radient-effect  top-96 left-[70%]"></div>
+            <div className=" hidden md:block green-radient  top-[25%] right-10"></div>
 
 
 

@@ -30,8 +30,8 @@ const AboutUs = () => {
 
 
       </div>
-      <div className="flex  gap-    lg:gap-0  w-[95%] md:w-[90%]   items-center md:items-end pb-0 pt-10  md:py-20">
-        <div className="w-[50%] md:w-[40%] relative md:p-10 ">
+      <div className="flex  gap-    lg:gap-4  w-[95%] md:w-[90%]   items-center md:items-end pb-0 pt-10  md:py-20">
+        <div className="w-[50%] md:w-[40%] relative md:px-10 ">
           <div className=" vector  left-5 top-2   md:hidden inline-block">
             <img src={b} alt="" className="bg-slate-950/50 rounded-lg " />
 
@@ -41,13 +41,15 @@ const AboutUs = () => {
 
           </div>
 
-          <img src={bg} alt="" className="  hidden md:block absolute -z-10 md:-left-4  w-[145px] md:w-auto  h-[147px] md:h-auto" />
+          <img src={bg} alt="" className="  hidden md:block absolute -z-10 md:-left-4 top-2 md:-top-10 w-[145px] md:w-auto  h-[147px] md:h-auto" />
 
-          <img
+         <div className=" robot vector">
+         <img
             src={main}
             alt=""
-            className="  relative hidden md:block  md:top-10 w-[144px]  h-[169px] md:h-auto vector  bg-slate-950/50 md:w-auto  rounded-lg md:rounded-3xl  z-40 "
+            className="  relative hidden md:block    w-[144px]  h-[169px] md:h-auto   bg-slate-800 md:w-auto  rounded-lg md:rounded-3xl  z-40 "
           />
+         </div>
           <div className="radient-effect hidden md:block "></div>
         </div>
         <div className="w-[50%] md:w-[60%] relative flex flex-col justify-end">

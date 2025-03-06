@@ -1,7 +1,7 @@
 import React from "react";
 import { FaAngleDown } from "react-icons/fa";
 
-const MiniTable = ({ TableHeaders, data, title }) => {
+const MiniTable = ({ TableHeaders, data, title ,fs="text-xl" }) => {
   return (
     <>
       <div className="flex justify-between items-center pe-2">
@@ -9,7 +9,7 @@ const MiniTable = ({ TableHeaders, data, title }) => {
           {title}
         </h1>
         <div className="">
-          <button className="connect text-sm px-6 rounded-md flex items-center gap-2 py-1">
+          <button className=" bg-cyan-700 text-white text-lg px-7 rounded-2xl flex items-center Oxanium gap-2 py-1 md:py-3">
             {" "}
             Filter <FaAngleDown />{" "}
           </button>
@@ -18,12 +18,12 @@ const MiniTable = ({ TableHeaders, data, title }) => {
       <div className="overflow-x-auto     relative rounded-xl border-2 border-cyan-500/50  border-cyan-300">
         <table className="w-full Oxanium  border-collapse">
           <thead className="w-full">
-            <tr className=" text-cyan-400  text-xs w-full ">
+            <tr className={` text-cyan-400  ${fs} w-full `}>
               {TableHeaders.map((val, i) => {
                 return (
                   <th
                     key={i}
-                    className="text-center py-3 px-2 md:px-4 border border-cyan-400    font-medium"
+                    className="text-center py-3 px-2 md:px-3 border border-cyan-500    font-medium"
                   >
                     {val}
                   </th>
@@ -31,7 +31,7 @@ const MiniTable = ({ TableHeaders, data, title }) => {
               })}
             </tr>
           </thead>
-          <tbody className=" text-xs md:text-base">
+          <tbody className=" text-xl md:text-base">
             {data.map((slot, index) => (
               <tr
                 key={index}

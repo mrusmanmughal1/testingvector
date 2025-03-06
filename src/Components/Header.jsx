@@ -9,7 +9,7 @@ const Header = ({ activeLink, handleLinkClick }) => {
   const [account, setAccount] = useState(null);
   useEffect(() => {
     handleLinkClick("main"); // This will highlight the 'Home' link when the page loads
-  }, [handleLinkClick]);
+  }, [ ]);
   
   return (
     <section id="/" className="hidden md:block">
