@@ -8,20 +8,20 @@ const VectorExchange = () => {
     <div className="border relative border-cyan-400 rounded-xl min-h-screen overflow-hidden  py-14 p-10">
       <div className=" hidden md:block green-radient top-80 left-0"></div>
 
-      <div className="flex justify-between items-center  ">
-        <div className="">
+      <div className="flex justify-between    ">
+        <div className="pt-10">
           <div className="title_font text-[50px] md:text-[122.62px]   !text-cyan-500">COMING SOON!</div>
-          <p className="text-cyan-500 Oxanium text-xl md:text-4xl mt-8">Stay Tune with us!</p>
+          <p className="text-cyan-500 Oxanium text-xl md:text-4xl  mt-11">Stay Tune with us!</p>
         </div>
         <div className="hidden md:block">
           <img src={logo} alt="" className="w-32 logo" />
         </div>
       </div>
-      <div className="flex flex-col md:flex-row justify-between  py-10">
-        <div className="title_font text-3xl md:!text-7xl  w-full ">
+      <div className="flex flex-col md:flex-row justify-between  py-20">
+        <div className="title_font text-3xl md:!text-7xl  w-[60%] ">
           All Good Things <br /> Come To Those Who <br /> Wait...
         </div>
-        <div className="  relative   w-full">
+        <div className="  relative   w-[40%]">
           <motion.img
             src={crupto}
             alt="Animated"

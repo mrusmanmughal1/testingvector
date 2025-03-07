@@ -39,11 +39,11 @@ const FAQ = () => {
 
   return (
     <section id="faq" className=" relative  poppins text-white mx-auto  py-16 md:py-32">
-      <div className="  relative  text-center flex justify-center  mb-20 ">
+      <div className="  relative  text-center flex justify-center  mb-10 md:mb-20 ">
         <h1 className=" font-bold text-center   faq title_font   md:mb-6">
           Frequently Asked Questions
         </h1>
-        <div className="radient-effect  hidden md:block  -bottom-20  left-0"></div>
+        <div className="radient-effect   block  -bottom-20  left-0"></div>
       </div>
       <div className="  w-[90%] lg:w-[60%] mx-auto">
         {faqs.map((faq, index) => (
@@ -73,7 +73,7 @@ const FAQ = () => {
         ))}
       </div>
       <div className="flex justify-center">
-        <div className="radient-effect  hidden md:block bottom-0"></div>
+        <div className="radient-effect   block bottom-0"></div>
       </div>
     </section>
   );

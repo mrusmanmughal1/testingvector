@@ -6,44 +6,44 @@ const AdminTotalSlots = () => {
     <div className="min-h-screen    ">
       <div className="  mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Slot 1 */}
-        <div className="relative rounded-xl border-4 border-cyan-500/80  p-6 overflow-hidden">
-          <div className="flex border-b border-cyan-500 justify-between text-2xl items-start mb-6">
+        <div className="relative rounded-2xl border-4 border-cyan-500/80 bg-black md:bg-transparent  pb-16 md:pb-2 p-2 overflow-hidden">
+          <div className="flex border-b border-cyan-500 justify-between  pb-4 text-lg md:text-2xl items-start mb-6">
             <h2 className=" Oxanium font-semibold text-white">Slot 1</h2>
             <span className="text-cyan-500   font-medium Oxanium">$05</span>
           </div>
 
-          <div className="grid grid-cols-2 gap-4  lato text-lg mb-8">
+          <div className="grid grid-cols-2 gap-2 border-b md:border-none border-b-cyan-700 pb-3 md:pb-0 lato text-base mb-8">
             <div>
-              <span className="text-gray-400 font-semibold">Total Users: </span>
+              <span className="text-white font-semibold">Total Users: </span>
               <span className="text-cyan-500">50</span>
             </div>
-            <div className="text-end">
-              <span className="text-gray-400">Direct Team: </span>
+            <div className="text-end pe-3">
+              <span className="text-white">Direct Team: </span>
               <span className="text-cyan-500">50</span>
             </div>
             <div>
-              <span className="text-gray-400">Complete Cycle: </span>
+              <span className="text-white">Complete Cycle: </span>
               <span className="text-cyan-500">01</span>
             </div>
             <div className="text-end">
-              <span className="text-gray-400">Indirect Team: </span>
+              <span className="text-white">Indirect Team: </span>
               <span className="text-cyan-500">01</span>
             </div>
           </div>
 
           {/* Network Visualization */}
-          <div className="relative  space-y-10 ">
+          <div className="relative  space-y-6 ">
             {/* Top Level */}
 
             {/* Second Level */}
-            <div className="       transform  flex justify-center space-x-32 md:space-x-60">
+            <div className="       transform  flex justify-between  md:px-[20%]">
               <div className="w-5 h-6 md:w-10  md:h-12  rounded-[50%]  border-2 border-cyan-500"></div>
 
               <div className="w-5 h-6 md:w-10  md:h-12  rounded-[50%] border-2 border-cyan-500"></div>
             </div>
 
             {/* Third Level */}
-            <div className="     flex justify-center space-x-10 md:space-x-14">
+            <div className="     flex justify-between  px-3 md:px-6">
               {[...Array(6)].map((_, i) => (
                 <div
                   key={i}
@@ -53,7 +53,7 @@ const AdminTotalSlots = () => {
             </div>
 
             {/* Bottom Level */}
-            <div className="     flex justify-center space-x-2 ">
+            <div className="     flex justify-between space-x-2 ">
               {[...Array(18)].map((_, i) => (
                 <>
                   <div
@@ -68,37 +68,37 @@ const AdminTotalSlots = () => {
         </div>
 
         {/* Slot 2 */}
-        <div className="relative rounded-xl border-4 border-cyan-500/80   p-6">
-          <div className="flex absolute top-[50%] left-[30%]   items-center justify-center ">
+        <div className="relative rounded-2xl border-4 border-cyan-500/80 bg-black md:bg-transparent   p-2">
+          <div className="flex absolute  w-full h-full   items-center justify-center ">
             <div className="
-           
-            px-16 py-3 text-lg  bg-cyan-600 text-white rounded-full transition-colors  
+           bg-gradient-to-r from-teal-700 to-cyan-600
+            px-16 py-3 text-lg    text-white rounded-full transition-colors  
             ">
               <button className="Oxanium">
                 Activate
               </button>
             </div>
           </div>
-          <div className="flex justify-between border-b border-cyan-500 text-2xl Oxanium items-start">
+          <div className="flex justify-between border-b border-cyan-500 text-lg md:text-2xl pb-4 Oxanium items-start">
             <h2 className="  font-semibold text-white">Slot 2</h2>
             <span className="text-cyan-500 font-medium">$10</span>
           </div>
           <div className="blur-lg">
             <div className="grid grid-cols-2 gap-4   lato text-lg mb-8">
               <div>
-                <span className="text-gray-400 font-semibold">Total Users: </span>
+                <span className="text-white font-semibold">Total Users: </span>
                 <span className="text-cyan-500">50</span>
               </div>
               <div className="text-end">
-                <span className="text-gray-400">Direct Team: </span>
+                <span className="text-white">Direct Team: </span>
                 <span className="text-cyan-500">50</span>
               </div>
               <div>
-                <span className="text-gray-400">Complete Cycle: </span>
+                <span className="text-white">Complete Cycle: </span>
                 <span className="text-cyan-500">01</span>
               </div>
               <div className="text-end">
-                <span className="text-gray-400">Indirect Team: </span>
+                <span className="text-white">Indirect Team: </span>
                 <span className="text-cyan-500">01</span>
               </div>
             </div>
@@ -142,27 +142,30 @@ const AdminTotalSlots = () => {
         </div>
 
         {/* Slot 3 */}
-        <div className="relative rounded-xl border-4 border-cyan-500/80   p-6">
-          <div className="text-2xl Oxanium flex justify-between items-start border-b border-cyan-500">
+        <div className="relative rounded-2xl border-4 border-cyan-500/80 bg-black md:bg-transparent p-2">
+          <div className="flex absolute  w-full h-full   items-center justify-center  ">
+            <img src={loc} alt="" />
+          </div>
+          <div className="text-2xl Oxanium flex justify-between items-start border-b pb-4 border-cyan-500">
             <h2 className=" font-semibold text-white">Slot 3</h2>
             <span className="text-cyan-500 font-medium">$20</span>
           </div>
           <div className="blur-lg">
             <div className="grid grid-cols-2 gap-4  lato text-lg mb-8">
               <div>
-                <span className="text-gray-400 font-semibold">Total Users: </span>
+                <span className="text-white font-semibold">Total Users: </span>
                 <span className="text-cyan-500">50</span>
               </div>
               <div className="text-end">
-                <span className="text-gray-400">Direct Team: </span>
+                <span className="text-white">Direct Team: </span>
                 <span className="text-cyan-500">50</span>
               </div>
               <div>
-                <span className="text-gray-400">Complete Cycle: </span>
+                <span className="text-white">Complete Cycle: </span>
                 <span className="text-cyan-500">01</span>
               </div>
               <div className="text-end">
-                <span className="text-gray-400">Indirect Team: </span>
+                <span className="text-white">Indirect Team: </span>
                 <span className="text-cyan-500">01</span>
               </div>
             </div>
@@ -198,33 +201,35 @@ const AdminTotalSlots = () => {
               </div>
             </div>
           </div>
-          <div className="flex absolute top-20 left-[45%] items-center justify-center h-64">
-            <img src={loc} alt="" className="w-12 h-14" />
-          </div>
+
         </div>
 
         {/* Slot 4 */}
-        <div className="relative rounded-xl border-4 border-cyan-500/80   p-6">
-          <div className="text-2xl Oxanium flex justify-between items-start border-b border-cyan-500">
+        <div className="relative rounded-2xl border-4 border-cyan-500/80 bg-black md:bg-transparent  p-2">
+          <div className="flex absolute  w-full h-full   items-center justify-center ">
+            <img src={loc} alt="" />
+
+          </div>
+          <div className="text-2xl Oxanium flex justify-between items-start border-b pb-4 border-cyan-500">
             <h2 className=" font-semibold text-white">Slot 4</h2>
             <span className="text-cyan-500 font-medium">$40</span>
           </div>
           <div className="blur-lg">
             <div className="grid grid-cols-2 gap-4   lato text-lg mb-8">
               <div>
-                <span className="text-gray-400 font-semibold">Total Users: </span>
+                <span className="text-white font-semibold">Total Users: </span>
                 <span className="text-cyan-500">50</span>
               </div>
               <div className="text-end">
-                <span className="text-gray-400">Direct Team: </span>
+                <span className="text-white">Direct Team: </span>
                 <span className="text-cyan-500">50</span>
               </div>
               <div>
-                <span className="text-gray-400">Complete Cycle: </span>
+                <span className="text-white">Complete Cycle: </span>
                 <span className="text-cyan-500">01</span>
               </div>
               <div className="text-end">
-                <span className="text-gray-400">Indirect Team: </span>
+                <span className="text-white">Indirect Team: </span>
                 <span className="text-cyan-500">01</span>
               </div>
             </div>
@@ -260,16 +265,13 @@ const AdminTotalSlots = () => {
               </div>
             </div>
           </div>
-          <div className="flex absolute top-20 left-[45%] items-center justify-center h-64">
-            <img src={loc} alt="" className="w-12 h-14" />
 
-          </div>
         </div>
       </div>
 
       {/* Show More Button */}
       <div className="flex justify-center mt-8">
-        <button className="px-8 py-3 bg-cyan-500 hover:bg-cyan-600 text-white rounded-full transition-colors">
+        <button className="px-32 py-4 text-lg Oxanium bg-gradient-to-r from-teal-700 to-cyan-600 text-white rounded-full transition-colors">
           Show More
         </button>
       </div>

@@ -1,7 +1,6 @@
 import Slider from "react-slick";
 import left from "../assets/leftarrow.png";
 import right from "../assets/rightarrow.png";
-import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 const SlotsDetails = () => {
   var settings = {
     dots: false,
@@ -73,7 +72,7 @@ const SlotsDetails = () => {
               return (
                 <div
                   key={i}
-                  className="  card-label-slots  Oxanium md:bg-zinc-900 rounded-3xl border border-cyan-400 py-2 md:py-4   px-6 space-y-3"
+                  className="  card-label-slots  bg-black  Oxanium md:bg-zinc-900 rounded-3xl border border-cyan-400 py-2 md:py-4   px-6 space-y-3"
                 >
                   {/* Header */}
                   <div className="flex border-b border-cyan-500/50 justify-between pb-2 font-semibold items-center">

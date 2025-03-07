@@ -52,14 +52,14 @@ const Admin = () => {
       <div className="flex w-full h-full">
         {/* sidebar */}
         <div
-          className={`    top-0 ${arrow ? "w-full md:w-[5%]" : " w-full  md:w-[20%]  "} ${navbar ? "right-0" : "-right-[100%] md:left-0"
+          className={`    top-0 ${arrow ? "w-full md:w-[5%]" : " w-full  md:w-[18%]  "} ${navbar ? "right-0" : "-right-[100%] md:left-0"
             } duration-1000 bg-black md:bg-[#211F27B5] z-[9999] min-h-full md:min-h-screen md:fixed  absolute  top-0`}
         >
           <Sidebar setnav={ShowNavbar} setarrow={setarrow} arrow={arrow} />
         </div>
         {/* sidebar end */}
 
-        <div className={`w-full relative ${arrow ? "md:ml-[5%]" : "md:ml-[20%]"} flex flex-col`}>
+        <div className={`w-full relative ${arrow ? "md:ml-[5%]" : "md:ml-[18%]"} flex flex-col`}>
           {profile && <div className="absolute z-[999999] top-14 md:top-20   w-72 right-20 md:right-12 py-4 px-2 border border-cyan-400 rounded-xl  bg-gray-900 ">
             <div className="flex px-1 justify-between items-center">
               <p className="text-white  font-bold ">Profile</p>
@@ -94,7 +94,7 @@ const Admin = () => {
           </div>}
           {/* header */}
           <div className="hidden md:block sticky top-0 bg-[#1F2020]  z-[9998] ">
-            <div className="flex  justify-between items-center p-5 border-b border-cyan-500/70">
+            <div className="flex  justify-between items-center p-5 border-b border-[#00B0C7A6]/65">
               <h1 className="admin_title_font text-white">Dashboard</h1>
               <div className="flex items-center gap-4">
                 <div className="relative flex items-center gap-2 bg-teal-950 p-4 border-cyan-500 border rounded-md">
@@ -125,7 +125,7 @@ const Admin = () => {
             </div>
           </div>
           {/* header end  */}
-          <div className=" flex-1  md:p-6 p-2  relative">
+          <div className=" flex-1  px-6  md:py-12 p-2  relative">
             <div className=" hidden md:block radient-effect  top-96"></div>
             <div className=" hidden md:block radient-effect  top-96 left-[70%]"></div>
             <div className=" hidden md:block green-radient  top-[25%] right-10"></div>

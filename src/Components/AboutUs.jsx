@@ -24,7 +24,7 @@ const AboutUs = () => {
       <div className=" green-radient block md:hidden -top-32   right-0 "></div>
       <div className="title_font  mb-10">About Us</div>
       <div className=" space-y-7 text-md  text-[15px]  lg:text-3xl w-[85%] my-4  lg:w-[80%] text-center ">
-        <p className="md:leading-[3rem] Lato" >
+        <p className="md:leading-[3rem] Lato text-left md:text-center" >
           Victer hub is 100%  decenterlized platform which can not be controled by any person it is a automatic system which automatically controled by the blockchain and the blockchain chain is a chain of blocks and the block can not be broken so its clearly defined that it can't be hacked by any person you you have full security on your funds and wallets
         </p>
 

@@ -42,7 +42,8 @@
   background-image: conic-gradient(from var(--angle),
       transparent,
       transparent,
-      #00b0c7);
+      #00b0c7 ,
+      #e30ce727);
   top: 50%;
   left: 50%;
   translate: -50% -50%;
@@ -66,7 +67,6 @@
 
 .card-label {
   margin: 0 auto;
-  padding: 1em;
   background: rgba(0, 0, 0, 0.01);
   text-align: center;
   position: relative;
@@ -76,8 +76,8 @@
 .card-label::before {
   content: "";
   position: absolute;
-  height: 89.5%;
-  width: 98.3%;
+  height: 102%;
+  width: 100.6%;
   background-image: conic-gradient(from var(--angle),
       transparent 50%,
 
@@ -103,11 +103,11 @@
   content: "";
   position: absolute;
   height: 101.5%;
-  width: 101.5%;
+  width: 102%;
   background-image: conic-gradient(from var(--angle),
       transparent 50%,
       #00b0c7,
-      #00b0c7);
+      #e30ce727);
   top: 50%;
   left: 50%;
   translate: -50% -50%;
@@ -143,6 +143,24 @@
 
 /* recent transitins  */
 
+
+.vector.tableT::after ,.vector.tableT::before{
+  content: "";
+  position: absolute;
+  height: 101.5%;
+  width: 100.5%;
+  background-image: conic-gradient(from var(--angle),
+      transparent 50%,
+      #00B0C7,
+      #e30ce727);
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  padding: 3px 0 3px 0;
+  border-radius: 1.3rem;
+  animation: 6s spin linear infinite;
+}
 .selectedbtn {
   text-align: center;
   position: relative;
@@ -215,14 +233,16 @@
 .widgets.vector::after,
 .widgets.vector::before {
   border-radius: 0px;
+  width: 102%;
+  height: 106%;
   background-image: conic-gradient(from var(--angle),
       transparent 50%,
       #00b0c7,
-      #01B0C7);
+      #e30ce727);
   backdrop-filter: blur(90.84970092773438px);
 
   box-shadow: 0px 3px 2px 0px #00B0C7;
-
+  
 }
 
 .details-slot.vector::after,
@@ -250,13 +270,15 @@
 
   .card-label::after,
   .card-label::before {
-    height: 80%;
-    width: 94%;
+    height: 102%;
+    width: 102%;
+    top: 49%;
   }
 
   .card-label-slots::before,
   .card-label-slots::after {
-    display: none;
+    height: 102%;
+
   }
 
   .selected-slot {

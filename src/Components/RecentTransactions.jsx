@@ -162,11 +162,13 @@ const RecentTransactions = () => {
     ? transactionData.filter((transaction) => transaction.status === selected)
     : transactionData;
   return (
-    
+
     <div className=" pb-20 md:py-10">
-      <div className="flex justify-center items-center flex-col">
-        <div className="title_font  my-20">Recent  &nbsp; Transactions</div>
-        <div className="flex justify-between w-[95%] md:w-[90%]">
+      <div className="flex justify-center items-center flex-col relative">
+      <div className="radient-effect  top-20      left-0 "></div>
+      <div className=" green-radient     right-0 "></div>
+        <div className="title_font  mt-12 mb-24">Recent  &nbsp; Transactions</div>
+        <div className="  w-[95%] md:w-[90%]">
           <div className=" flex items-center   gap-2 md:gap-8 mb-8 poppins">
             <button
               onClick={() => setSelected("Completed")}
@@ -190,18 +192,10 @@ const RecentTransactions = () => {
               InProgress
             </button>
           </div>
-          <div className="hidden md:block">
-            <button
-              onClick={() => setSelected("Completed")}
-              className={`${selected === "Completed" ? "!bg-teal-950 selectedbtn    text-cyan-400" : "text-cyan-500"
-                } text-base flex items-center gap-2 md:text-lg rounded-md  px-4 md:px-12  py-2`}
-            >
-              This Month <IoIosArrowDown />
-            </button>
-          </div>
+          
         </div>
         <div className="w-[95%] md:w-[90%] rounded-2xl   mx-auto text-white  transaction-table">
-          <div className=" border-4 border-cyan-500 rounded-2xl  md:vector   ">
+          <div className=" border-4 md:border-0 border-cyan-500 rounded-2xl    vector tableT   ">
             <div className="relative overflow-hidden rounded-2xl   bg-navy-900">
               {/* Glow Effect */}
               <div className="absolute inset-0 pointer-events-none     "></div>
