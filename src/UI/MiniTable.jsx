@@ -10,8 +10,8 @@ const MiniTable = ({ TableHeaders, data, title ,fs="text-[12px] md:text-[22px]" 
         </h1>
         <div className="">
           <button className=" bg-gradient-to-r from-teal-700 to-cyan-600 text-white text-lg px-7 rounded-2xl flex items-center Oxanium gap-2 py-1 md:py-2">
-            {" "}
-            Filter <FaAngleDown />{" "}
+            
+            Filter <FaAngleDown />
           </button>
         </div>
       </div>
