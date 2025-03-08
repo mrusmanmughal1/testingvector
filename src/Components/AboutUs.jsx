@@ -8,8 +8,8 @@ import five from "../assets/about/5.png";
 
 
 
-import r from "../assets/AboutMain/r.png"
-import b from "../assets/AboutMain/bb.png"
+import r from "../assets/Aboutmain/r.png"
+import b from "../assets/Aboutmain/bb.png"
 import bg from "../assets/Aboutmain/2.png";
 
 
