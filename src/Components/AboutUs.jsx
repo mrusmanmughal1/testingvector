@@ -1,13 +1,16 @@
 import main from "../assets/Aboutmain/1.svg";
 
-import bg from "../assets/Aboutmain/2.png";
 import one from "../assets/about/4.png";
-import to from "../assets/About/2.png";
-import three from "../assets/About/3.png";
-import fore from "../assets/About/1.png";
-import five from "../assets/About/5.png";
+import to from "../assets/about/2.png";
+import three from "../assets/about/3.png";
+import fore from "../assets/about/1.png";
+import five from "../assets/about/5.png";
+
+
+
 import r from "../assets/AboutMain/r.png"
 import b from "../assets/AboutMain/bb.png"
+import bg from "../assets/Aboutmain/2.png";
 
 
 const AboutUs = () => {
